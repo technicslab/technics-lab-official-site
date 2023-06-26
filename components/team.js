@@ -41,7 +41,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16" id="Team">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl text-center font-semibold text-gray-800 dark:text-white mb-8">
           Our Team

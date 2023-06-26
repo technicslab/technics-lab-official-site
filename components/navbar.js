@@ -5,14 +5,7 @@ import { Disclosure } from "@headlessui/react";
 import { useEffect } from "react";
 
 const Navbar = () => {
-  const navigation = [
-    "Product",
-    "Services",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
-  ];
+  const navigation = ["Product", "Services", "Features", "Company"];
 
   useEffect(() => {
     const handleSmoothScroll = (event) => {
