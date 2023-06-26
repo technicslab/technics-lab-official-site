@@ -56,7 +56,7 @@ const Navbar = () => {
                         className="w-8"
                       />
                     </span>
-                    <span>Nextly</span>
+                    <span>Technics Lab</span>
                   </span>
                 </Link>
 
@@ -130,7 +130,7 @@ const Navbar = () => {
             href="/"
             className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
           >
-            Get Started
+            Contact Us
           </Link>
 
           <ThemeChanger />
