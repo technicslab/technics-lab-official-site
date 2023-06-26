@@ -56,10 +56,8 @@ const TeamSection = () => {
           {teamData.map((member, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800 ${
-                index % 2 === 0 ? "aos-animate-left" : "aos-animate-right"
-              }`}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              className={`flex flex-col items-center justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800 }`}
+              data-aos={index % 2 === 0 ? "fade-up" : "fade-right"}
               data-aos-duration="1000"
             >
               <img
