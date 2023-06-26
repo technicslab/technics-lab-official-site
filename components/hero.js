@@ -1,13 +1,22 @@
 import Image from "next/image";
 import Container from "./container";
 import heroImg from "../public/img/hero.png";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Hero = () => {
+  useEffect(() => {
+    Aos.init();
+  });
   return (
     <>
       <Container className="flex flex-wrap ">
         <div className="flex items-center w-full lg:w-1/2">
-          <div className="max-w-2xl mb-8">
+          <div
+            className="max-w-2xl mb-8"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
               We’re{" "}
               <span className="animate-pulse font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
@@ -26,7 +35,7 @@ const Hero = () => {
                 Deadlines met
               </span>{" "}
               . Our talented team ensures your project exceeds expectations.
-              Expertise across diverse fields. Unleashing desired{" "}
+              Expertise across diverse fields. Unleashing desired
               <span className="gradient-text-blue-dark">perfection</span>. Your
               vision, magnified.
             </p>
@@ -63,7 +72,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="">
+          <div className="" data-aos="zoom-in" data-aos-duration="2000">
             <Image
               src={heroImg}
               width="616"
@@ -77,33 +86,7 @@ const Hero = () => {
         </div>
       </Container>
 
-      <Container>
-        <div className="flex flex-col justify-center">
-          {/* <div className="text-xl text-center text-gray-700 dark:text-white">
-            Trusted by <span className="text-indigo-600"></span> customers
-            worldwide
-          </div> */}
-
-          {/* <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <AmazonLogo />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <VerizonLogo />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <MicrosoftLogo />
-            </div>
-            <div className="pt-1 text-gray-400 dark:text-gray-400">
-              <NetflixLogo />
-            </div>
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <SonyLogo />
-            </div>
-          </div>
-           */}
-        </div>
-      </Container>
+      <Container></Container>
     </>
   );
 };
