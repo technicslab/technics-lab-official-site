@@ -1,5 +1,5 @@
 
-# Technics Lab Site - Landing Page Template with Next.js & Tailwind CSS
+# Technics Lab Site
 
 ## How to use
 
