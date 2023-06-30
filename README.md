@@ -31,9 +31,16 @@ yarn dev
 npm run dev
 ```
 
+## Apply linter
+
+- pnpm lint:fix
+- yarn lint:fix
+- npm run lint:fix
+
 ## Deploy with Vercel
 
-- Automated
+- (should have login with hosting email)
+- vercel --prod
 
 ## Author
 
