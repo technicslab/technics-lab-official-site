@@ -6,6 +6,11 @@ labels: ''
 assignees: ''
 
 ---
+**blocking
+this task is blocking number
+
+**blocked
+this task is blocked by numer 
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
