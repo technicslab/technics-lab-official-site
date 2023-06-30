@@ -22,8 +22,11 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "react/prop-types": "off",
-
-    indent: ["error", "tab"],
+    indent: [
+      "error",
+      "tab",
+      { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 } },
+    ],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     semi: ["error", "always"],
