@@ -2,17 +2,23 @@ import React from "react";
 import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 const Faq = () => {
-	const faqdata = [
+	const faqData = [
 		{
 			question: "What services do you offer?",
 			answer:
-        "We offer a wide range of services including web development, mobile app development, UI/UX design, and digital marketing.",
+        "We offer a wide range of services including web development, mobile app development, Smart Contract with Blockchain , and Software Prototyping",
 		},
 		{
 			question: "How can I request a quote?",
 			answer:
         "To request a quote, you can fill out the contact form on our website or send us an email with your project requirements.",
 		},
+		{
+			question: "How to arrange the meeting",
+			answer:
+        "On the Home Page, Go to the top there is button of meeting, click that will navigate to fix a meeting.",
+		},
+
 		{
 			question: "What is your pricing structure?",
 			answer:
@@ -28,7 +34,7 @@ const Faq = () => {
 	return (
 		<Container className="!p-0">
 			<div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-				{faqdata.map((item, index) => (
+				{faqData.map((item, index) => (
 					<div key={index} className="mb-5">
 						<Disclosure>
 							{({ open }) => (

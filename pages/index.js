@@ -21,7 +21,8 @@ const Home = () => {
 				<title>Technics Lab</title>
 				<meta
 					name="description"
-					content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+					content="Quality Precision Deadlines met. Our talented team ensures your project exceeds expectations.
+          Expertise across diverse fields. Unleashing desired"
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>

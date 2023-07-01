@@ -1,9 +1,15 @@
-import React from "react";
-import Container from "./container";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import AnimatedContainer from "./containerAnimated";
 
 const SectionTitle = (props) => {
+	useEffect(() => {
+		AOS.init();
+	}, []);
+
 	return (
-		<Container
+		<AnimatedContainer
 			id={props?.id}
 			className={`flex w-full flex-col mt-4 ${
 				props.align === "left" ? "" : "items-center justify-center text-center"
@@ -26,7 +32,7 @@ const SectionTitle = (props) => {
 					{props.children}
 				</p>
 			)}
-		</Container>
+		</AnimatedContainer>
 	);
 };
 

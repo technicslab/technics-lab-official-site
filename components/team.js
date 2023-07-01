@@ -1,6 +1,12 @@
-import React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
 
 const TeamSection = () => {
+	useEffect(() => {
+		Aos.init();
+	}, []);
+
 	const teamData = [
 		{
 			image: "GET_FROM_LINKED_IN_FOR_NOW",
@@ -16,7 +22,7 @@ const TeamSection = () => {
 		},
 		{
 			image: "GET_YOUR_OWN",
-			name: "Haseeb-ullah",
+			name: "Haseeb Ullah",
 			role: "CTO",
 			linked_in: "https://www.linkedin.com/in/haseebullahabbasi/",
 		},
@@ -50,7 +56,9 @@ const TeamSection = () => {
 					{teamData.map((member, index) => (
 						<div
 							key={index}
-							className="flex flex-col items-center justify-center shadow-xl bg-white dark:bg-gray-800 px-10 py-10 rounded-xl"
+							className={"flex flex-col items-center justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800 }"}
+							data-aos={index % 2 === 0 ? "fade-up" : "fade-right"}
+							data-aos-duration="1000"
 						>
 							<img
 								src={`https://api.dicebear.com/6.x/initials/svg?seed=${member.name}`}
