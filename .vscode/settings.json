@@ -1,0 +1,9 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+
+  "eslint.options": {
+    "configFile": ".eslintrc.js"
+  }
+  // "editor.comments.insertSpace": true,
+}
