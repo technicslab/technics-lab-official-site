@@ -24,16 +24,15 @@ const Hero = () => {
 							</span>
 						</h1>
 						<p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-							<span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-500 to-purple-800">
-                Quality
+							<span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-800 to-sky-600 hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400 transition-all duration-500 dark:hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400">
+                Quality{" "}
 							</span>
-              ,{" "}
-							<span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-500 to-purple-800">
-                Precision
-							</span>{" "}
-							<span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-500 to-purple-800">
-                Deadlines met
-							</span>{" "}
+							<span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-800 to-sky-600 hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400 transition-all duration-500 dark:hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400">
+                Precision{" "}
+							</span>
+							<span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-800 to-sky-600 hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400 transition-all duration-500 dark:hover:bg-gradient-to-r hover:from-yellow-700 hover:to-yellow-400">
+                Excellence
+							</span>
               . Our talented team ensures your project exceeds expectations.
               Expertise across diverse fields. Unleashing desired
 							<span className="gradient-text-blue-dark">perfection</span>. Your
@@ -49,7 +48,7 @@ const Hero = () => {
                 Let&apos;s Meet
 							</a>
 							<a
-								href="https://github.com/haseebUllahAbbasi/"
+								href="https://github.com/technics-lab"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="flex items-center space-x-2 text-gray-500 dark:text-gray-400"
