@@ -2,17 +2,18 @@ import {
 	FaceSmileIcon,
 	ChartBarSquareIcon,
 	CursorArrowRaysIcon,
-	DevicePhoneMobileIcon,
-	AdjustmentsHorizontalIcon,
-	SunIcon,
+	ChevronDoubleUpIcon,
+	BoltIcon,
+	HandThumbUpIcon,
+	ShieldCheckIcon,
 } from "@heroicons/react/24/solid";
 import React from "react";
 import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
-
+// Partner with us and elevate your business to new heights.
 const benefitOne = {
-	title: "Highlight your benefits",
-	desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+	title: "Unlock the Potential of Our Services",
+	desc: " With our tailored solutions and innovative technologies, we empower you to turn your visions into reality and gain valuable insights. Join us on a transformative journey of success and innovation, taking your business to new heights. Let's shape the future together.",
 	image: benefitOneImg,
 	bullets: [
 		{
@@ -34,24 +35,29 @@ const benefitOne = {
 };
 
 const benefitTwo = {
-	title: "Offer more benefits here",
-	desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+	title: "Unleash Your Potential with US",
+	desc: "We seamlessly integrate our development services with your existing systems and workflows. This ensures a smooth transition and minimizes disruptions to your business operations.",
 	image: benefitTwoImg,
 	bullets: [
 		{
-			title: "Mobile Responsive Template",
-			desc: "Nextly is designed as a mobile first responsive template.",
-			icon: <DevicePhoneMobileIcon />,
+			title: "Reliability",
+			desc: "We understand the importance of meeting deadlines. You can rely on us to deliver your project on time without compromising on quality.",
+			icon: <ShieldCheckIcon />,
 		},
 		{
-			title: "Powered by Next.js & TailwindCSS",
-			desc: "This template is powered by latest technologies and tools.",
-			icon: <AdjustmentsHorizontalIcon />,
+			title: "Quality you can trust",
+			desc: "Technics Lab is a reliable partner for meeting all of your development needs. We have a team of talented developers who work hard to deliver high quality work on time.",
+			icon: <HandThumbUpIcon />,
 		},
 		{
-			title: "Dark & Light Mode",
-			desc: "Nextly comes with a zero-config light & dark mode. ",
-			icon: <SunIcon />,
+			title: "How we help you succeed",
+			desc: "We offer complete solutions for any app you may need - from web apps to blockchain apps, we can do it all. Let us help you get your idea off the ground by developing it into a working app that people love!",
+			icon: <ChevronDoubleUpIcon />,
+		},
+		{
+			title: "Fast turnaround time",
+			desc: "We know how important deadlines are, which is why we pride ourselves on being able to meet them. Our developers can provide complete solutions with a fast turnaround time. If you need a new app or website built, get in touch with us today!",
+			icon: <BoltIcon />,
 		},
 	],
 };

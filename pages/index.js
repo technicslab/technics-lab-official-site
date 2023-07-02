@@ -4,7 +4,6 @@ import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 import React from "react";
 import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
@@ -34,32 +33,31 @@ const Home = () => {
 				pretitle="Services"
 				title=" Why should you join us"
 			>
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        Join us and unlock the potential of these cutting-edge services to
+        accelerate your business growth and achieve your goals.
 			</SectionTitle>
 
 			<Services data={benefitOne} />
 			<SectionTitle
 				id={"Benefits"}
 				pretitle="Benefits"
-				title="Let us Provide you Some more Stuff"
+				title="Let us provide you with more value"
 			>
 				{/* new stuff can be added  */}
 			</SectionTitle>
 
 			<Benefits imgPos="right" data={benefitTwo} />
-			<SectionTitle
-				id="Products"
-				pretitle="Watch a video"
-				title="Let us help you with video demonstration"
-			>
-				{/* new stuff can be added  */}
-			</SectionTitle>
+			{/* <SectionTitle
+        id="Products"
+        pretitle="Watch a video"
+        title="Let us help you with video demonstration"
+      >
+        you can add more desc if you want      
+      </SectionTitle> */}
 
-			<Video />
+			{/* <Video /> */}
 			<SectionTitle
-				id={"Company"}
+				id={"Team"}
 				pretitle="Team"
 				title="Every thing is possible with great team"
 			>
