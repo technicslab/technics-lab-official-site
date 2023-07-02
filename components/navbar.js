@@ -6,20 +6,19 @@ import { useEffect } from "react";
 import React from "react";
 
 const Navbar = () => {
-	const navigation = ["Product", "Services", "Features", "Company"];
+	const navigation = ["Products", "Services", "Benefits", "Company"];
 
 	useEffect(() => {
 		const handleSmoothScroll = (event) => {
 			event.preventDefault();
-			const targetId = event.currentTarget.getAttribute("href");
+			const targetId = event.currentTarget.getAttribute("href").substring(1);
 			const targetElement = document.querySelector(targetId);
 			targetElement.scrollIntoView({
 				behavior: "smooth",
 			});
 		};
 
-		const menuLinks = document.querySelectorAll("nav__item");
-
+		const menuLinks = document.querySelectorAll(".nav__item a");
 		menuLinks.forEach((link) => {
 			link.addEventListener("click", handleSmoothScroll);
 		});

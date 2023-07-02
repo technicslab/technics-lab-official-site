@@ -40,15 +40,32 @@ const Home = () => {
 			</SectionTitle>
 
 			<Services data={benefitOne} />
+			<SectionTitle
+				id={"Benefits"}
+				pretitle="Benefits"
+				title="Let us Provide you Some more Stuff"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
 
 			<Benefits imgPos="right" data={benefitTwo} />
 			<SectionTitle
+				id="Products"
 				pretitle="Watch a video"
 				title="Let us help you with video demonstration"
 			>
 				{/* new stuff can be added  */}
 			</SectionTitle>
+
 			<Video />
+			<SectionTitle
+				id={"Company"}
+				pretitle="Team"
+				title="Every thing is possible with great team"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
+
 			<TeamSection />
 
 			<SectionTitle

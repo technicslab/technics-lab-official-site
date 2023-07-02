@@ -47,7 +47,10 @@ const ContactUsSection = () => {
 							<textarea
 								id="message"
 								className="w-full px-4 py-2 border rounded-md text-gray-800 dark:text-gray-300 focus:outline-none focus:border-indigo-500"
-								rows="4"
+								rows="6"
+								style={{
+									resize: "none",
+								}}
 								placeholder="Enter your message"
 							></textarea>
 						</div>

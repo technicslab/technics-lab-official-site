@@ -16,13 +16,13 @@ const SectionTitle = (props) => {
 			}`}
 		>
 			{props.pretitle && (
-				<div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+				<h1 className="max-w-2xl font-bold text-3xl tracking-wider text-indigo-600 uppercase lg:text-5xl">
 					{props.pretitle}
-				</div>
+				</h1>
 			)}
 
 			{props.title && (
-				<h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+				<h2 className="max-w-2xl mt-3 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-3xl dark:text-white">
 					{props.title}
 				</h2>
 			)}

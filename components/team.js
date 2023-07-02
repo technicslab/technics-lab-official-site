@@ -9,37 +9,37 @@ const TeamSection = () => {
 
 	const teamData = [
 		{
-			image: "GET_FROM_LINKED_IN_FOR_NOW",
+			image: "./img/gray.jpg",
 			name: "Zeeshan Ahmed",
 			role: "Co-founder",
 			linked_in: "https://www.linkedin.com/in/zeeshan-ahmed-developer/",
 		},
 		{
-			image: "GET_FROM_LINKED_IN_FOR_NOW",
+			image: "./img/gray.jpg",
 			name: "Nadir Hussain",
 			role: "Co-founder",
 			linked_in: "https://www.linkedin.com/in/nadir-hussain-206b2319b/",
 		},
 		{
-			image: "GET_YOUR_OWN",
+			image: "./img/gray.jpg",
 			name: "Haseeb Ullah",
 			role: "CTO",
 			linked_in: "https://www.linkedin.com/in/haseebullahabbasi/",
 		},
 		{
-			image: "GET_FROM_LINKED_IN_FOR_NOW",
+			image: "./img/gray.jpg",
 			name: "Nageeta Kumari",
 			role: "Co-founder",
 			linked_in: "https://www.linkedin.com/in/nageeta-kumari-3a48401a3/",
 		},
 		{
-			image: "GET_FROM_LINKED_IN_FOR_NOW",
+			image: "./img/gray.jpg",
 			name: "Samad Ali",
 			role: "CEO",
 			linked_in: "https://www.linkedin.com/in/samad-ali-qureshi-7724ba15a/",
 		},
 		{
-			image: "GET_FROM_LINKED_IN_FOR_NOW",
+			image: "./img/gray.jpg",
 			name: "Noman Aijaz",
 			role: "COO",
 			linked_in: "https://www.linkedin.com/in/noman-aijaz-835670158/",
@@ -49,36 +49,35 @@ const TeamSection = () => {
 	return (
 		<section className="py-16" id="Team">
 			<div className="container mx-auto px-4">
-				<h2 className="text-3xl text-center font-semibold text-gray-800 dark:text-white mb-8">
-          Our Team
-				</h2>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{teamData.map((member, index) => (
 						<div
 							key={index}
-							className={"flex flex-col items-center justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800 }"}
+							className={
+								"flex flex-col items-center justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800 transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-trueGray-700"
+							}
 							data-aos={index % 2 === 0 ? "fade-up" : "fade-right"}
 							data-aos-duration="1000"
 						>
 							<img
-								src={`https://api.dicebear.com/6.x/initials/svg?seed=${member.name}`}
+								src={`${member.image}`}
 								alt={member.name}
-								className="w-24 h-24 rounded-full mb-4"
+								className="w-48 h-48 rounded-full mb-4"
 							/>
 							<h3 className="text-xl font-medium text-gray-800 dark:text-white">
 								{member.name}
 							</h3>
 							<p className="text-gray-600 dark:text-gray-300">{member.role}</p>
-							<div className="flex space-x-2 mt-4">
+							<div className="flex space-x-11 mt-4">
 								<a
 									href={member.linked_in}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="text-indigo-500 hover:text-indigo-700"
+									className="text-indigo-500 hover:text-indigo-700 transition-colors duration-300"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										className="h-5 w-5"
+										className="h-7 w-7"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -89,11 +88,11 @@ const TeamSection = () => {
 									href={member.linked_in}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="text-indigo-500 hover:text-indigo-700"
+									className="text-indigo-500  hover:text-indigo-700 transition-colors duration-300"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										className="h-5 w-5"
+										className="h-7 w-7"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
