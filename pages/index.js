@@ -14,6 +14,7 @@ import Services from "../components/services";
 import TeamSection from "../components/team";
 import ContactUsSection from "../components/contactUs";
 import ProjectSection from "../components/projectsection";
+import ServicesSection from "../components/servicesSection";
 
 const Home = () => {
   return (
@@ -63,13 +64,23 @@ const Home = () => {
       <SectionTitle
         id={"Projects"}
         pretitle="projects"
-        title="Every thing is possible with great team"
+        title="Want to know what work we have done?"
       >
         {/* new stuff can be added  */}
       </SectionTitle>
 
       <ProjectSection />
 
+      <SectionTitle
+        id={"Services"}
+        pretitle="services"
+        title="Get to know which services we offer"
+      >
+        {/* new stuff can be added  */}
+      </SectionTitle>
+
+      <ServicesSection />
+      
       <SectionTitle
         id={"Company"}
         pretitle="Team"

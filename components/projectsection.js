@@ -54,7 +54,9 @@ export const ProjectRow = ({ projects }) => {
     <div>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-semibold">Projects</h2>
-        <Link href="/projects">View All</Link>
+        <Link href="/projects " className="hover:underline ">
+          View All
+        </Link>
       </div>
       <div className="flex flex-wrap -mx-4">
         {projects.map((project, index) => (
