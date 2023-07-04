@@ -4,7 +4,6 @@ import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 import React from "react";
 import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
@@ -16,89 +15,95 @@ import ContactUsSection from "../components/contactUs";
 import ProjectSection from "../components/projectsection";
 
 const Home = () => {
-  return (
-    <>
-      <Head>
-        <title>Technics Lab</title>
-        <meta
-          name="description"
-          content="Quality Precision Deadlines met. Our talented team ensures your project exceeds expectations.
+	return (
+		<>
+			<Head>
+				<title>Technics Lab</title>
+				<meta
+					name="description"
+					content="Quality Precision Deadlines met. Our talented team ensures your project exceeds expectations.
           Expertise across diverse fields. Unleashing desired"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-      <Navbar />
-      <Hero />
-      <SectionTitle
-        id={"Services"}
-        pretitle="Services"
-        title=" Why should you join us"
-      >
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
-      </SectionTitle>
+			<Navbar />
+			<Hero />
+			<SectionTitle
+				id={"Services"}
+				pretitle="Services"
+				title=" Why should you join us"
+			>
+        Join us and unlock the potential of these cutting-edge services to
+        accelerate your business growth and achieve your goals.
+			</SectionTitle>
 
-      <Services data={benefitOne} />
-      <SectionTitle
-        id={"Benefits"}
-        pretitle="Benefits"
-        title="Let us Provide you Some more Stuff"
-      >
-        {/* new stuff can be added  */}
-      </SectionTitle>
+			<Services data={benefitOne} />
+			<SectionTitle
+				id={"Benefits"}
+				pretitle="Benefits"
+				title="Let us provide you with more value"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
 
-      <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
+			<Benefits imgPos="right" data={benefitTwo} />
+			{/* <SectionTitle
         id="Products"
         pretitle="Watch a video"
         title="Let us help you with video demonstration"
       >
-        {/* new stuff can be added  */}
-      </SectionTitle>
+        you can add more desc if you want      
+      </SectionTitle> */}
 
-      <Video />
+			{/* <Video /> */}
+			<SectionTitle
+				id={"Team"}
+				pretitle="Team"
+				title="Every thing is possible with great team"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
 
-      <SectionTitle
-        id={"Projects"}
-        pretitle="projects"
-        title="Every thing is possible with great team"
-      >
-        {/* new stuff can be added  */}
-      </SectionTitle>
+			<SectionTitle
+				id={"Projects"}
+				pretitle="projects"
+				title="Every thing is possible with great team"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
 
-      <ProjectSection />
+			<ProjectSection />
 
-      <SectionTitle
-        id={"Company"}
-        pretitle="Team"
-        title="Every thing is possible with great team"
-      >
-        {/* new stuff can be added  */}
-      </SectionTitle>
+			<SectionTitle
+				id={"Company"}
+				pretitle="Team"
+				title="Every thing is possible with great team"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
 
-      <TeamSection />
+			<TeamSection />
 
-      <SectionTitle
-        pretitle="Testimonials"
-        title="Here's what our customers said"
-      >
+			<SectionTitle
+				pretitle="Testimonials"
+				title="Here's what our customers said"
+			>
         Testimonails is a great way to increase the brand trust and awareness.
         Use this section to highlight your popular customers.
-      </SectionTitle>
-      <Testimonials />
+			</SectionTitle>
+			<Testimonials />
 
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
+			<SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
-      </SectionTitle>
-      <Faq />
-      <ContactUsSection />
-      <Footer />
-      <PopupWidget />
-    </>
-  );
+			</SectionTitle>
+			<Faq />
+			<ContactUsSection />
+			<Footer />
+			<PopupWidget />
+		</>
+	);
 };
 
 export default Home;
