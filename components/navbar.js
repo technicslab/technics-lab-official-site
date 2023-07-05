@@ -4,9 +4,10 @@ import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { useEffect } from "react";
 import React from "react";
+import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
-	const navigation = ["Products", "Services", "Benefits", "Company"];
+	const navigation = ["Products", "Services", "Benefits", "Team"];
 
 	useEffect(() => {
 		const handleSmoothScroll = (event) => {
@@ -77,26 +78,35 @@ const Navbar = () => {
 										)}
 									</svg>
 								</Disclosure.Button>
-
-								<Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
-									<>
-										{navigation.map((item, index) => (
+								<Transition
+									show={open}
+									enter="transition-all duration-500 ease-out"
+									enterFrom="opacity-0 max-h-0"
+									enterTo="opacity-100 max-h-full"
+									leave="transition-all duration-500 ease-out"
+									leaveFrom="opacity-100 max-h-full"
+									leaveTo="opacity-0 max-h-0"
+								>
+									<Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+										<>
+											{navigation.map((item, index) => (
+												<Link
+													key={index}
+													href={`#${item}`}
+													className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+												>
+													{item}
+												</Link>
+											))}
 											<Link
-												key={index}
-												href="/"
-												className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+												href="#contact"
+												className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
 											>
-												{item}
+                        Contact Us
 											</Link>
-										))}
-										<Link
-											href="/"
-											className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
-										>
-                      Get Started
-										</Link>
-									</>
-								</Disclosure.Panel>
+										</>
+									</Disclosure.Panel>
+								</Transition>
 							</div>
 						</>
 					)}
@@ -120,7 +130,7 @@ const Navbar = () => {
 
 				<div className="hidden mr-3 space-x-4 lg:flex nav__item">
 					<Link
-						href="/"
+						href="#contact"
 						className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
 					>
             Contact Us
