@@ -12,6 +12,7 @@ import PopupWidget from "../components/popupWidget";
 import Services from "../components/services";
 import TeamSection from "../components/team";
 import ContactUsSection from "../components/contactUs";
+import ProjectSection from "../components/projectsection";
 
 const Home = () => {
 	return (
@@ -58,6 +59,24 @@ const Home = () => {
 			{/* <Video /> */}
 			<SectionTitle
 				id={"Team"}
+				pretitle="Team"
+				title="Every thing is possible with great team"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
+
+			<SectionTitle
+				id={"Projects"}
+				pretitle="projects"
+				title="Every thing is possible with great team"
+			>
+				{/* new stuff can be added  */}
+			</SectionTitle>
+
+			<ProjectSection />
+
+			<SectionTitle
+				id={"Company"}
 				pretitle="Team"
 				title="Every thing is possible with great team"
 			>
