@@ -14,6 +14,7 @@ import TeamSection from "../components/team";
 import ContactUsSection from "../components/contactUs";
 import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
+import StatsSection from "../components/statsSections";
 
 const Home = () => {
 	return (
@@ -49,6 +50,13 @@ const Home = () => {
 			</SectionTitle>
 
 			<Benefits imgPos="right" data={benefitTwo} />
+			<SectionTitle
+				id={"Company-Stats"}
+				pretitle="Company Stats"
+				title="Check out some interesting statistics about our company."
+			></SectionTitle>
+			<StatsSection />
+
 			{/* <SectionTitle
         id="Products"
         pretitle="Watch a video"
@@ -58,13 +66,6 @@ const Home = () => {
       </SectionTitle> */}
 
 			{/* <Video /> */}
-			<SectionTitle
-				id={"Team"}
-				pretitle="Team"
-				title="Every thing is possible with great team"
-			>
-				{/* new stuff can be added  */}
-			</SectionTitle>
 
 			<SectionTitle
 				id={"Projects"}
