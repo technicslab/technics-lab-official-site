@@ -1,6 +1,7 @@
-import ProjectSection, { ProjectCard } from "../components/projectsection";
+import Elements from "../components/Elements";
+import { ProjectCard } from "../components/projectsection";
 import SectionTitle from "../components/sectionTitle";
-
+import React from "react";
 const ProjectPage = () => {
   const projects = [
     {
@@ -79,20 +80,22 @@ const ProjectPage = () => {
     },
   ];
   return (
-    <div className="px-2 py-2">
-      <SectionTitle
-        id={"Projects"}
-        pretitle="projects"
-        title="Here are some awesome projects"
-      >
-        Get to know our services, here is some of our projects, have a look!!
-      </SectionTitle>
-      <div className="flex flex-wrap ">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+    <Elements>
+      <div className="px-2 py-2">
+        <SectionTitle
+          id={"Projects"}
+          pretitle="projects"
+          title="Here are some awesome projects"
+        >
+          Get to know our services, here is some of our projects, have a look!!
+        </SectionTitle>
+        <div className="flex flex-wrap ">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
       </div>
-    </div>
+    </Elements>
   );
 };
 export default ProjectPage;

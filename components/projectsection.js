@@ -1,10 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import SectionTitle from "./sectionTitle";
 
 export const ProjectCard = ({ project }) => {
-  const { title, desc, tech, images, video, date } = project;
-  // Function to truncate the description
+  const { title, desc, tech, images, date } = project;
+
   const truncateDescription = (text, limit) => {
     if (text.length <= limit) {
       return text;
@@ -18,11 +17,22 @@ export const ProjectCard = ({ project }) => {
     <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 cursor-pointer">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         {images && images.length > 0 ? (
-          <img
-            src={images[0]}
-            alt={title}
-            className="w-full h-48 object-cover"
-          />
+          <div className="relative">
+            <img
+              src={images[0]}
+              alt={title}
+              className="w-full h-48 object-cover transition-opacity hover:opacity-100 duration-300"
+              style={{ opacity: "0.9" }}
+            />
+            <div className="absolute top-0 left-0 w-full h-full transition-opacity duration-300 hover:opacity-100">
+              <img
+                src={images[0]}
+                alt={title}
+                className="w-full h-full object-cover"
+                style={{ opacity: "1" }}
+              />
+            </div>
+          </div>
         ) : (
           <div className="bg-gray-300 h-48"></div>
         )}
@@ -40,7 +50,6 @@ export const ProjectCard = ({ project }) => {
             ))}
           </div>
         </div>
-
         <div className="bg-gray-100 text-gray-500 px-4 py-2 text-xs">
           {date}
         </div>
@@ -54,9 +63,7 @@ export const ProjectRow = ({ projects }) => {
     <div>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-semibold">Projects</h2>
-        <Link href="/projects " className="hover:underline ">
-          View All
-        </Link>
+        <Link href="/projects">View All</Link>
       </div>
       <div className="flex flex-wrap -mx-4">
         {projects.map((project, index) => (

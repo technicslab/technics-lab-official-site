@@ -28,67 +28,56 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-			<Navbar />
-			<Hero />
-			<SectionTitle
-				id={"Services"}
-				pretitle="Services"
-				title=" Why should you join us"
-			>
+      <Navbar />
+      <Hero />
+      <SectionTitle
+        id={"Services"}
+        pretitle="Services"
+        title=" Why should you join us"
+      >
         Join us and unlock the potential of these cutting-edge services to
         accelerate your business growth and achieve your goals.
-			</SectionTitle>
+      </SectionTitle>
 
-			<Services data={benefitOne} />
-			<SectionTitle
-				id={"Benefits"}
-				pretitle="Benefits"
-				title="Let us provide you with more value"
-			>
-				{/* new stuff can be added  */}
-			</SectionTitle>
+      <Services data={benefitOne} />
+      <SectionTitle
+        id={"Benefits"}
+        pretitle="Benefits"
+        title="Let us provide you with more value"
+      >
+        {/* new stuff can be added  */}
+      </SectionTitle>
 
-			<Benefits imgPos="right" data={benefitTwo} />
-			{/* <SectionTitle
-
+      <Benefits imgPos="right" data={benefitTwo} />
+      {/* <SectionTitle
         id="Products"
         pretitle="Watch a video"
         title="Let us help you with video demonstration"
       >
-
         you can add more desc if you want      
       </SectionTitle> */}
 
-			{/* <Video /> */}
-			<SectionTitle
-				id={"Team"}
-				pretitle="Team"
-				title="Every thing is possible with great team"
-			>
-				{/* new stuff can be added  */}
-			</SectionTitle>
+      {/* <Video /> */}
+      <SectionTitle
+        id={"Team"}
+        pretitle="Team"
+        title="Every thing is possible with great team"
+      >
+        {/* new stuff can be added  */}
+      </SectionTitle>
 
       <SectionTitle
         id={"Projects"}
         pretitle="projects"
-        title="Want to know what work we have done?"
+        title="Every thing is possible with great team"
       >
         {/* new stuff can be added  */}
       </SectionTitle>
 
       <ProjectSection />
 
-      <SectionTitle
-        id={"Services"}
-        pretitle="services"
-        title="Get to know which services we offer"
-      >
-        {/* new stuff can be added  */}
-      </SectionTitle>
-
       <ServicesSection />
-      
+
       <SectionTitle
         id={"Company"}
         pretitle="Team"

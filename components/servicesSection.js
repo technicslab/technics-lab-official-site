@@ -100,25 +100,6 @@ const ServicesSection = () => {
       ],
       date: "2023-07-02",
     },
-    {
-      title: "Service 4",
-      desc: "Description of Service 4",
-      tech: ["Tech 7", "Tech 8"],
-      images: [
-        "https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80",
-        "https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80",
-      ],
-      date: "2023-07-03",
-    },
-    {
-      title: "Service 5",
-      desc: "Description of Service 5",
-      tech: ["Tech 9", "Tech 10"],
-      images: [
-        "https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80",
-      ],
-      date: "2023-07-04",
-    },
   ];
   return <ServiceList services={services} />;
 };
