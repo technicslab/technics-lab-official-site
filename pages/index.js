@@ -13,6 +13,7 @@ import Services from "../components/services";
 import TeamSection from "../components/team";
 import ContactUsSection from "../components/contactUs";
 import ProjectSection from "../components/projectsection";
+import ServicesSection from "../components/servicesSection";
 
 const Home = () => {
 	return (
@@ -74,6 +75,8 @@ const Home = () => {
 			</SectionTitle>
 
 			<ProjectSection />
+
+			<ServicesSection />
 
 			<SectionTitle
 				id={"Company"}
