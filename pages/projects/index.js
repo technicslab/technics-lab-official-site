@@ -1,6 +1,6 @@
-import Elements from "../components/Elements";
-import { ProjectCard } from "../components/projectsection";
-import SectionTitle from "../components/sectionTitle";
+import Elements from "../../components/Elements";
+import { ProjectCard } from "../../components/projectsection";
+import SectionTitle from "../../components/sectionTitle";
 import React from "react";
 const ProjectPage = () => {
 	const projects = [
