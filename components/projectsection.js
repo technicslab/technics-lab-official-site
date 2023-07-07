@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ id, project }) => {
 	const { title, desc, tech, images, date } = project;
 
 	const truncateDescription = (text, limit) => {
@@ -14,7 +14,10 @@ export const ProjectCard = ({ project }) => {
 	const truncatedDesc = truncateDescription(desc, 110);
 
 	return (
-		<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 cursor-pointer">
+		<Link
+			href={`/projects/${id}`}
+			className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 cursor-pointer"
+		>
 			<div className="bg-white rounded-lg shadow-lg overflow-hidden">
 				{images && images.length > 0 ? (
 					<div className="relative">
@@ -54,7 +57,7 @@ export const ProjectCard = ({ project }) => {
 					{date}
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
@@ -68,7 +71,7 @@ export const ProjectRow = ({ projects }) => {
 
 			<div className="flex flex-wrap -mx-4">
 				{projects.map((project, index) => (
-					<ProjectCard key={index} project={project} />
+					<ProjectCard key={index} id={index} project={project} />
 				))}
 			</div>
 		</div>

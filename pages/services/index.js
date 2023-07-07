@@ -1,7 +1,7 @@
 import React from "react";
-import SectionTitle from "../components/sectionTitle";
-import { ServiceCard } from "../components/servicesSection";
-import Elements from "../components/Elements";
+import SectionTitle from "../../components/sectionTitle";
+import { ServiceCard } from "../../components/servicesSection";
+import Elements from "../../components/Elements";
 
 const ServicesPage = () => {
 	const services = [

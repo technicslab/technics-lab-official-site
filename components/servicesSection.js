@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export const ServiceCard = ({ service }) => {
+export const ServiceCard = ({ id, service }) => {
 	const { title, desc, tech, images, date } = service;
 
 	const truncateDescription = (text, limit) => {
@@ -14,7 +14,10 @@ export const ServiceCard = ({ service }) => {
 	const truncatedDesc = truncateDescription(desc, 110);
 
 	return (
-		<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 cursor-pointer">
+		<Link
+			href={`/services/${id}`}
+			className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 cursor-pointer"
+		>
 			<div className="bg-white rounded-lg shadow-lg overflow-hidden">
 				{images && images.length > 0 ? (
 					<div className="relative">
@@ -54,7 +57,7 @@ export const ServiceCard = ({ service }) => {
 					{date}
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 const ServiceList = ({ services }) => {
@@ -68,7 +71,7 @@ const ServiceList = ({ services }) => {
 			<div className="flex flex-wrap -mx-4">
 				{/* <div className="grid grid-cols-4 sm:grid-cols-6"> */}
 				{services.map((service, index) => (
-					<ServiceCard key={index} service={service} />
+					<ServiceCard key={index} id={index} service={service} />
 				))}
 				{/* </div> */}
 			</div>
