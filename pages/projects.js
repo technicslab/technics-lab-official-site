@@ -81,7 +81,7 @@ const ProjectPage = () => {
 	];
 	return (
 		<Elements>
-			<div className="px-2 py-2">
+			<div className="px-2 py-2 mt-28">
 				<SectionTitle
 					id={"Projects"}
 					pretitle="projects"

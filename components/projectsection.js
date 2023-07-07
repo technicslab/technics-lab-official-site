@@ -65,6 +65,7 @@ export const ProjectRow = ({ projects }) => {
 				<h2 className="text-2xl font-semibold">Projects</h2>
 				<Link href="/projects">View All</Link>
 			</div>
+
 			<div className="flex flex-wrap -mx-4">
 				{projects.map((project, index) => (
 					<ProjectCard key={index} project={project} />
@@ -83,6 +84,7 @@ const ProjectSection = () => {
 			images: [
 				"https://images.unsplash.com/photo-1661956601030-fdfb9c7e9e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=442&q=80",
 			],
+
 			date: "2023-06-30",
 		},
 		{

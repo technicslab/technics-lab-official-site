@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../components/sectionTitle";
 import { ServiceCard } from "../components/servicesSection";
+import Elements from "../components/Elements";
 
 const ServicesPage = () => {
 	const services = [
@@ -65,20 +66,22 @@ const ServicesPage = () => {
 		},
 	];
 	return (
-		<div className="px-2 py-2">
-			<SectionTitle
-				id={"Services"}
-				pretitle="services"
-				title="Here are the complete services we provide to our clients"
-			>
-        Get to know our services, here is the complete list, have a look!!
-			</SectionTitle>
-			<div className="flex flex-wrap ">
-				{services.map((service, index) => (
-					<ServiceCard key={index} service={service} />
-				))}
+		<Elements>
+			<div className="px-2 py-2 mt-28">
+				<SectionTitle
+					id={"Services"}
+					pretitle="services"
+					title="Here are the complete services we provide to our clients"
+				>
+          Get to know our services, here is the complete list, have a look!!
+				</SectionTitle>
+				<div className="flex flex-wrap ">
+					{services.map((service, index) => (
+						<ServiceCard key={index} service={service} />
+					))}
+				</div>
 			</div>
-		</div>
+		</Elements>
 	);
 };
 export default ServicesPage;
