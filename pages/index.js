@@ -15,6 +15,7 @@ import ContactUsSection from "../components/contactUs";
 import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
+import UpWidget from "../components/upWidget";
 
 const Home = () => {
 	return (
@@ -105,6 +106,7 @@ const Home = () => {
 			<Faq />
 			<ContactUsSection />
 			<Footer />
+			<UpWidget />
 			<PopupWidget />
 		</>
 	);
