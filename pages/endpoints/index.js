@@ -1,21 +1,21 @@
-import { apiGET } from "../api/service";
+import { apiGET } from "../api/service"
 
-export const getFAQs = async () => {
-	try {
-		const apiResult = await apiGET("faqs");
-		return apiResult.data;
-	} catch (error) {
-		console.error("Error fetching FAQs:", error);
-		// throw error;
-	}
-};
+export const getFAQs = (setData) => {
+	apiGET('faqs').then(res => {
+		if (res && res.data) {
+			setData(res.data)
+		}
+	}).catch(error => {
+		console.log("Error occured in FAQs", error.message)
+	})
+}
 
-export const getCompanyDetails = async () => {
-	try {
-		const apiResult = await apiGET("companies");
-		return apiResult.data;
-	} catch (error) {
-		console.error("Error fetching company details:", error);
-		// throw error;
-	}
-};
+export const getCompanyDetails = () => {
+	apiGET('companies').then(res => {
+		if (res && res.data) {
+			console.log("company", res.data)
+		}
+	}).catch(error => {
+		console.log("Error occured in fetch Company Data", error.message)
+	})
+}

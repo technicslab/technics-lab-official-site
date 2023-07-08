@@ -16,8 +16,8 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getCompanyDetails, getFAQs } from "./endpoints/index";
-const Home = ({ faqData }) => {
+
+const Home = () => {
 	return (
 		<>
 			<Head>
@@ -29,6 +29,7 @@ const Home = ({ faqData }) => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+
 			<Navbar />
 			<Hero />
 			<SectionTitle
@@ -36,7 +37,6 @@ const Home = ({ faqData }) => {
 				pretitle="Services"
 				title=" Why should you join us"
 			>
-				{JSON.stringify(faqData)}
         Join us and unlock the potential of these cutting-edge services to
         accelerate your business growth and achieve your goals.
 			</SectionTitle>
@@ -103,19 +103,13 @@ const Home = ({ faqData }) => {
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
 			</SectionTitle>
-			<Faq faqData={faqData} />
+			<Faq />
 			<ContactUsSection />
 			<Footer />
 			<UpWidget />
 			<PopupWidget />
 		</>
 	);
-};
-export const getServerSideProps = async () => {
-	const faqData = await getFAQs();
-	const companyData = await getCompanyDetails();
-
-	return { props: { faqData, companyData } };
 };
 
 export default Home;

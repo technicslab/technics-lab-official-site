@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
-const Faq = ({ faqData }) => {
+import { getCompanyDetails, getFAQs } from "../pages/endpoints";
+
+const Faq = () => {
+	const [faqData, setFaqsData] = useState([])
+	useEffect(() => {
+		getFAQs(setFaqsData)
+		getCompanyDetails()
+	}, [])
+
+
 	return (
 		<Container className="!p-0">
 			<div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-				{faqData?.map((item, index) => (
+				{faqData.map((item, index) => (
 					<div key={index} className="mb-5">
 						<Disclosure>
 							{({ open }) => (
