@@ -83,7 +83,7 @@ const Navbar = () => {
 									leaveFrom="opacity-100 max-h-full"
 									leaveTo="opacity-0 max-h-0"
 								>
-									<Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+									<Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden bg-white dark:bg-trueGray-900">
 										<>
 											{navigation.map((item, index) => (
 												<Link
