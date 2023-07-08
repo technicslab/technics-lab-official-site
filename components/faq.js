@@ -1,36 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
+import { getCompanyDetails, getFAQs } from "../pages/endpoints";
 
 const Faq = () => {
-	const faqData = [
-		{
-			question: "What services do you offer?",
-			answer:
-        "We offer a wide range of services including web development, mobile app development, Smart Contract with Blockchain, and Software Prototyping",
-		},
-		{
-			question: "How can I request a quote?",
-			answer:
-        "To request a quote, you can fill out the contact form on our website or send us an email with your project requirements.",
-		},
-		{
-			question: "How to arrange the meeting",
-			answer:
-        "On the Home Page, Go to the top there is a button for a meeting, click that to navigate to fix a meeting.",
-		},
-		{
-			question: "What is your pricing structure?",
-			answer:
-        "Our pricing is tailored to each project based on its complexity, scope, and specific requirements. We provide detailed pricing information after reviewing the project details.",
-		},
-		{
-			question: "Do you provide ongoing maintenance and support?",
-			answer:
-        "Yes, we offer ongoing maintenance and support services to ensure your website or application continues to run smoothly and stays up-to-date.",
-		},
-	];
+	const [faqData, setFaqsData] = useState([])
+	useEffect(() => {
+		getFAQs(setFaqsData)
+		getCompanyDetails()
+	}, [])
+
 
 	return (
 		<Container className="!p-0">
@@ -41,7 +21,7 @@ const Faq = () => {
 							{({ open }) => (
 								<>
 									<Disclosure.Button className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-gray-800 rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-gray-200">
-										<span>{item.question}</span>
+										<span>{item.attributes.question}</span>
 										<span className="ml-auto">
 											{open ? (
 												<svg
@@ -86,7 +66,7 @@ const Faq = () => {
 										leaveTo="opacity-0 max-h-0"
 									>
 										<Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
-											{item.answer}
+											{item.attributes.answer}
 										</Disclosure.Panel>
 									</Transition>
 								</>
