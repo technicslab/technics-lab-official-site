@@ -1,5 +1,5 @@
-let BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
-let token=process.env.NEXT_PUBLIC_STRAPI_TOKEN
+let BASE_URL = window.process.env.NEXT_PUBLIC_STRAPI_URL;
+let token=window.process.env.NEXT_PUBLIC_STRAPI_TOKEN
 
 const apiPOST = async (api, body) => {
   const res = await fetch(`${BASE_URL}/${api}`, {
