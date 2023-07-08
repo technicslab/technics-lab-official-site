@@ -2,8 +2,49 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
+const getIconComponent = (iconName) => {
+	switch (iconName) {
+		case "Twitter":
+			return <Twitter />;
+		case "Facebook":
+			return <Facebook />;
+		case "Instagram":
+			return <Instagram />;
+		case "Linkedin":
+			return <Linkedin />;
+		default:
+			return null;
+	}
+};
 
 export default function Footer() {
+	const socialMediaLinks = [
+		{
+			name: "Twitter",
+			href: "https://twitter.com/web3templates",
+			icon: "Twitter",
+			hoverClass: "hover:text-blue-400",
+		},
+		{
+			name: "Facebook",
+			href: "https://facebook.com/web3templates",
+			icon: "Facebook",
+			hoverClass: "hover:text-blue-500",
+		},
+		{
+			name: "Instagram",
+			href: "https://instagram.com",
+			icon: "Instagram",
+			hoverClass: "hover:text-orange-600",
+		},
+		{
+			name: "Linkedin",
+			href: "https://www.linkedin.com/in/technics-lab-b25042247",
+			icon: "Linkedin",
+			hoverClass: "hover:text-blue-600",
+		},
+	];
+
 	const navigation = ["Product", "Features", "Team"];
 	const legal = ["Terms", "Privacy", "Legal"];
 	return (
@@ -78,42 +119,18 @@ export default function Footer() {
 					<div className="">
 						<div>Follow us</div>
 						<div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
-							<a
-								href="https://twitter.com/web3templates"
-								target="_blank"
-								className="hover:text-blue-400"
-								rel="noopener noreferrer"
-							>
-								<span className="sr-only">Twitter</span>
-								<Twitter />
-							</a>
-							<a
-								href="https://facebook.com/web3templates"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-blue-500"
-							>
-								<span className="sr-only">Facebook</span>
-								<Facebook />
-							</a>
-							<a
-								href="https://instagram.com"
-								target="_blank"
-								className="hover:text-orange-600"
-								rel="noopener noreferrer"
-							>
-								<span className="sr-only">Instagram</span>
-								<Instagram />
-							</a>
-							<a
-								href="https://www.linkedin.com/in/technics-lab-b25042247"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-blue-600"
-							>
-								<span className="sr-only">Linkedin</span>
-								<Linkedin />
-							</a>
+							{socialMediaLinks.map((link) => (
+								<a
+									key={link.name}
+									href={link.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={link.hoverClass}
+								>
+									<span className="sr-only">{link.name}</span>
+									{getIconComponent(link.icon)}
+								</a>
+							))}
 						</div>
 					</div>
 				</div>
