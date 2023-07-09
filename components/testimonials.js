@@ -2,98 +2,94 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Container from "./container";
-import userOneImg from "../public/img/user1.jpg";
-import userTwoImg from "../public/img/user2.jpg";
-import userThreeImg from "../public/img/user3.jpg";
 import Image from "next/image";
+import styles from "../css/testimonials.module.css";
+import clsx from "clsx";
 
-const Testimonials = () => {
+const Testimonials = ({ testimonialsData }) => {
 	useEffect(() => {
 		AOS.init();
 	}, []);
 
 	return (
 		<Container id={"Products"}>
-			<div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
-				<div
-					className="lg:col-span-2 xl:col-auto"
-					data-aos="fade-up"
-					data-aos-duration="800"
-				>
-					<div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-						<p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark> that hits some of your
-              benefits from one of your popular customer.
-						</p>
-
-						<Avatar
-							image={userOneImg}
-							name="Sarah Steiner"
-							title="VP Sales at Google"
-						/>
-					</div>
-				</div>
-				<div className="" data-aos="fade-up" data-aos-duration="800">
-					<div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-						<p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark> to keep it
-              short and simple.
-						</p>
-
-						<Avatar
-							image={userTwoImg}
-							name="Dylan Ambrose"
-							title="Lead marketer at Netflix"
-						/>
-					</div>
-				</div>
-				<div className="" data-aos="fade-up" data-aos-duration="800">
-					<div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-						<p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve
-              seen. I would use this for anything.
-						</p>
-
-						<Avatar
-							image={userThreeImg}
-							name="Gabrielle Winn"
-							title="Co-founder of Acme Inc"
-						/>
-					</div>
-				</div>
-			</div>
+			<WithSpeechBubbles testimonialsData={testimonialsData} />
 		</Container>
 	);
 };
 
-function Avatar(props) {
+const Testimonial = ({ children }) => {
+	return <div>{children}</div>;
+};
+
+const TestimonialContent = ({ children }) => {
 	return (
-		<div className="flex items-center mt-8 space-x-3">
-			<div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-				<Image
-					src={props.image}
-					width="40"
-					height="40"
-					alt="Avatar"
-					placeholder="blur"
-				/>
-			</div>
-			<div>
-				<div className="text-lg font-medium">{props.name}</div>
-				<div className="text-gray-600 dark:text-gray-400">{props.title}</div>
+		<div className="bg-white shadow-lg p-2 flex flex-col items-center relative after:absolute after:-bottom-16 after:left-1/2 after:-translate-x-1/2 after:w-0">
+			{children}
+		</div>
+	);
+};
+
+const TestimonialHeading = ({ children }) => {
+	return <h3 className={styles.companyHeading}>{children}</h3>;
+};
+
+const TestimonialAvatar = ({ src, name, title }) => {
+	const myLoader = ({ src }) => {
+		return src;
+	};
+
+	return (
+		<div className="flex flex-col items-center mt-8">
+			<Image
+				loader={myLoader}
+				src={src}
+				width={500}
+				height={500}
+				alt={name}
+				className="mb-2 w-20 h-20 rounded-full"
+			/>
+
+			{/* <Image src={src} width={100} height={100}  /> */}
+			<div className="space-y-1 text-center">
+				<p className="font-semibold">{name}</p>
+				<p className="text-sm text-gray-600">{title}</p>
 			</div>
 		</div>
 	);
-}
+};
 
-function Mark(props) {
+function WithSpeechBubbles({ testimonialsData }) {
 	return (
-		<>
-			{" "}
-			<mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
-				{props.children}
-			</mark>{" "}
-		</>
+		<div className={clsx("bg-slate-100 dark:bg-trueGray-800 p-5")}>
+			<div className="container mx-auto py-6">
+				<div className={clsx("space-x-4 md:space-x-10 ", styles.container)}>
+					{testimonialsData.map((item) => {
+						return (
+							<Testimonial key={item.id}>
+								<TestimonialContent>
+									<TestimonialHeading>
+										{item.attributes.company}
+									</TestimonialHeading>
+									<video
+										className={styles.videoContainer}
+										controls
+										controlsList="nodownload"
+									>
+										<source src={item.attributes.video} type="video/mp4" />
+									</video>
+								</TestimonialContent>
+								<TestimonialAvatar
+									src={item.attributes.profile_image}
+									name={item.attributes.name}
+									title={item.attributes.designation}
+								/>
+							</Testimonial>
+						);
+					})}
+				</div>
+			</div>
+		</div>
 	);
 }
 

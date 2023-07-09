@@ -9,7 +9,7 @@ const UpWidget = () => {
 			const scrollPosition = window.scrollY;
 			const windowHeight = window.innerHeight;
 			const documentHeight = document.documentElement.scrollHeight;
-			const threshold = (documentHeight - windowHeight) * 0.85;
+			const threshold = (documentHeight - windowHeight) * 0.20;
 
 			if (scrollPosition >= threshold) {
 				setShowWidget(true);
@@ -39,7 +39,7 @@ const UpWidget = () => {
 		>
 			<div
 				onClick={scrollToTop}
-				className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-20 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease"
+				className="cursor-pointer fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-20 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
