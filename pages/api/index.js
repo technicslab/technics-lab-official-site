@@ -1,4 +1,4 @@
-import { apiGET } from "../api/service";
+import { apiGET } from "./service";
 
 export const getFAQs = async () => {
 	try {
@@ -29,12 +29,10 @@ export const getCompanyDetails = async () => {
 	}
 };
 
-
 export const getTestimonials = async () => {
 	try {
 		const apiResult = await apiGET("testimonials?populate=*");
 		return apiResult.data;
-
 	} catch (error) {
 		console.error("Error fetching company details:", error);
 		// throw error;

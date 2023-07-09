@@ -2,7 +2,7 @@ import Elements from "../../components/Elements";
 import { ProjectCard } from "../../components/projectsection";
 import SectionTitle from "../../components/sectionTitle";
 import React from "react";
-import { getProjects } from "../endpoints";
+import { getProjects } from "../api";
 const ProjectPage = ({ projectsData }) => {
 	return (
 		<Elements>

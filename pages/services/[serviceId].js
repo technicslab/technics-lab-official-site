@@ -2,7 +2,7 @@ import Elements from "../../components/Elements";
 import SectionTitle from "../../components/sectionTitle";
 import React from "react";
 import { useRouter } from "next/router";
-import { getProjects } from "../endpoints";
+import { getProjects } from "../api";
 
 const ProjectDetailPage = () => {
 	const router = useRouter();
