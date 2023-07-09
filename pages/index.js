@@ -16,8 +16,8 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getCompanyDetails, getFAQs } from "./endpoints/index";
-const Home = ({ faqData }) => {
+import { getCompanyDetails, getFAQs, getProjects } from "./endpoints/index";
+const Home = ({ faqData, projects }) => {
 	return (
 		<>
 			<Head>
@@ -76,7 +76,7 @@ const Home = ({ faqData }) => {
 				{/* new stuff can be added  */}
 			</SectionTitle>
 
-			<ProjectSection />
+			<ProjectSection projects={projects} />
 
 			<ServicesSection />
 
@@ -114,8 +114,9 @@ const Home = ({ faqData }) => {
 export const getServerSideProps = async () => {
 	const faqData = await getFAQs();
 	const companyData = await getCompanyDetails();
+	const projects = await getProjects();
 
-	return { props: { faqData, companyData } };
+	return { props: { faqData, companyData, projects } };
 };
 
 export default Home;
