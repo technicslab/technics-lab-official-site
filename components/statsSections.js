@@ -15,7 +15,7 @@ const StatsSection = ({stats}) => {
 						{
 								stats && stats.map((s,i)=>{
 									return(
-										<div className="text-center">
+										<div className="text-center" key={i}>
 										<div className="flex items-center justify-center w-10 h-10 mx-auto mb-3 rounded-full bg-teal-accent-400 sm:w-12 sm:h-12">
 											<Image loader={myLoader} src={s.attributes.icon} width={50} height={50} alt="icon" />
 										</div>
