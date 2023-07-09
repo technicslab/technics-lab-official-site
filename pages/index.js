@@ -43,7 +43,6 @@ const Home = ({ faqData, testimonialsData, projects }) => {
 					pretitle="Services"
 					title=" Why should you join us"
 				>
-					{JSON.stringify(faqData)}
           Join us and unlock the potential of these cutting-edge services to
           accelerate your business growth and achieve your goals.
 				</SectionTitle>
