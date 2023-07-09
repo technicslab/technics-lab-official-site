@@ -16,7 +16,7 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getCompanyDetails, getFAQs, getProjects, getStats, getTestimonials,   } from "./endpoints/index";
+import { getCompanyDetails, getFAQs, getProjects, getStats, getTestimonials,   } from "./api/index"
 
 const Home = ({ faqData, testimonialsData, projects, stats }) => {
 	return (
