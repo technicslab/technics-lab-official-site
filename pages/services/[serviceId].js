@@ -2,6 +2,7 @@ import Elements from "../../components/Elements";
 import SectionTitle from "../../components/sectionTitle";
 import React from "react";
 import { useRouter } from "next/router";
+import { getProjects } from "../endpoints";
 
 const ProjectDetailPage = () => {
 	const router = useRouter();
@@ -68,6 +69,12 @@ const ProjectDetailPage = () => {
 			</div>
 		</Elements>
 	);
+};
+export const getServerSideProps = async (context) => {
+	const param = context.params;
+	console.log(param, "console");
+	const projects = await getProjects();
+	return { props: { projectsData: projects } };
 };
 
 export default ProjectDetailPage;

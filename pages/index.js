@@ -16,9 +16,9 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getCompanyDetails, getFAQs, getTestimonials } from "./endpoints/index";
+import { getCompanyDetails, getFAQs, getProjects, getTestimonials,   } from "./endpoints/index";
 
-const Home = ({ faqData, testimonialsData }) => {
+const Home = ({ faqData, testimonialsData, projects }) => {
 	return (
 		<div>
 			<Head>
@@ -67,7 +67,7 @@ const Home = ({ faqData, testimonialsData }) => {
 			>
 			</SectionTitle>
 
-			<ProjectSection />
+			<ProjectSection projects={projects} />
 
 			<ServicesSection />
 
@@ -108,14 +108,15 @@ export const getServerSideProps = async () => {
 	try {
 		const faqData = await getFAQs();
 		const testimonialsData=await getTestimonials()
-
 		const companyData = await getCompanyDetails();
+		const projects = await getProjects();
 
 		return {
 			props: {
 				faqData: faqData || null,
 				companyData: companyData || null,
-				testimonialsData:testimonialsData || null
+				testimonialsData:testimonialsData || null,
+				projects
 			},
 		};
 	} catch (error) {

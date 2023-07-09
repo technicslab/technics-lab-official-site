@@ -9,6 +9,15 @@ export const getFAQs = async () => {
 		// throw error;
 	}
 };
+export const getProjects = async () => {
+	try {
+		const apiResult = await apiGET("projects?populate=*");
+		return apiResult.data;
+	} catch (error) {
+		console.error("Error fetching FAQs:", error);
+		// throw error;
+	}
+};
 
 export const getCompanyDetails = async () => {
 	try {
