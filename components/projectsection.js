@@ -60,7 +60,7 @@ export const ProjectRow = ({ projects }) => {
 			</div>
 
 			<div className="flex flex-wrap -mx-4">
-				{projects.slice(0, 4).map((project, index) => (
+				{projects && projects.length>0 && projects.slice(0, 4).map((project, index) => (
 					<ProjectCard
 						key={index}
 						id={project.id}

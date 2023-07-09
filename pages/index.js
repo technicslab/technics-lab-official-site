@@ -16,9 +16,9 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getCompanyDetails, getFAQs, getProjects, getTestimonials,   } from "./endpoints/index";
+import { getCompanyDetails, getFAQs, getProjects, getStats, getTestimonials,   } from "./endpoints/index";
 
-const Home = ({ faqData, testimonialsData, projects }) => {
+const Home = ({ faqData, testimonialsData, projects, stats }) => {
 	return (
 		<div>
 			<Head>
@@ -56,9 +56,9 @@ const Home = ({ faqData, testimonialsData, projects }) => {
 			<SectionTitle
 				id={"Company-Stats"}
 				pretitle="Company Stats"
-				title="Check out some interesting statistics about our company."
+				title="Numbers that Speak: Unleashing the Force of Our Company Stats!"
 			></SectionTitle>
-			<StatsSection />
+			<StatsSection stats={stats}/>
 
 			<SectionTitle
 				id={"Projects"}
@@ -110,13 +110,15 @@ export const getServerSideProps = async () => {
 		const testimonialsData=await getTestimonials()
 		const companyData = await getCompanyDetails();
 		const projects = await getProjects();
+		const stats = await getStats();
 
 		return {
 			props: {
 				faqData: faqData || null,
 				companyData: companyData || null,
 				testimonialsData:testimonialsData || null,
-				projects
+				projects: projects || null,
+				stats:stats || null
 			},
 		};
 	} catch (error) {

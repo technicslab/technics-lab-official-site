@@ -41,3 +41,14 @@ export const getTestimonials = async () => {
 	}
 };
 
+export const getStats = async () => {
+	try {
+		const apiResult = await apiGET("stats");
+		return apiResult.data;
+
+	} catch (error) {
+		console.error("Error fetching company stats:", error);
+		// throw error;
+	}
+};
+
