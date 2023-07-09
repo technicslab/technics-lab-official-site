@@ -15,13 +15,17 @@ const apiPOST = async (api, body) => {
 };
 
 const apiGET = async (api) => {
-	const res = await fetch(`${BASE_URL}/${api}`, {
+	let res = await fetch(`${BASE_URL}/${api}`, {
 		headers: {
 			"Content-Type": "application/json",
 			Authorization: "Bearer " + token,
 		},
 	});
-	return await res.json();
+	if (!res.status || res.status!=200) {
+		throw new Error("API request failed");
+	}
+	res=await res.json();
+	return res
 };
 
 const apiPUT = async (api, body) => {

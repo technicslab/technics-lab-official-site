@@ -16,10 +16,11 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getCompanyDetails, getFAQs } from "./endpoints/index";
-const Home = ({ faqData }) => {
+import { getCompanyDetails, getFAQs, getTestimonials } from "./endpoints/index";
+
+const Home = ({ faqData, testimonialsData }) => {
 	return (
-		<>
+		<div>
 			<Head>
 				<title>Technics Lab</title>
 				<meta
@@ -30,6 +31,7 @@ const Home = ({ faqData }) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
+			<div className="lg:p-16 sm:p-4">
 			<Hero />
 			<SectionTitle
 				id={"Services"}
@@ -58,22 +60,11 @@ const Home = ({ faqData }) => {
 			></SectionTitle>
 			<StatsSection />
 
-			{/* <SectionTitle
-        id="Products"
-        pretitle="Watch a video"
-        title="Let us help you with video demonstration"
-      >
-        you can add more desc if you want      
-      </SectionTitle> */}
-
-			{/* <Video /> */}
-
 			<SectionTitle
 				id={"Projects"}
 				pretitle="projects"
 				title="Every thing is possible with great team"
 			>
-				{/* new stuff can be added  */}
 			</SectionTitle>
 
 			<ProjectSection />
@@ -97,7 +88,7 @@ const Home = ({ faqData }) => {
         Testimonails is a great way to increase the brand trust and awareness.
         Use this section to highlight your popular customers.
 			</SectionTitle>
-			<Testimonials />
+			<Testimonials testimonialsData={testimonialsData}/>
 
 			<SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         Answer your customers possible questions here, it will increase the
@@ -108,14 +99,36 @@ const Home = ({ faqData }) => {
 			<Footer />
 			<UpWidget />
 			<PopupWidget />
-		</>
+			</div>
+			
+		</div>
 	);
 };
 export const getServerSideProps = async () => {
-	const faqData = await getFAQs();
-	const companyData = await getCompanyDetails();
+	try {
+		const faqData = await getFAQs();
+		const testimonialsData=await getTestimonials()
 
-	return { props: { faqData, companyData } };
+		const companyData = await getCompanyDetails();
+
+		return {
+			props: {
+				faqData: faqData || null,
+				companyData: companyData || null,
+				testimonialsData:testimonialsData || null
+			},
+		};
+	} catch (error) {
+		console.error('Error fetching data:', error);
+		return {
+			props: {
+				faqData: null,
+				companyData: null,
+				testimonialsData:null
+			},
+		};
+	}
 };
+
 
 export default Home;

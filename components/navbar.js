@@ -29,7 +29,7 @@ const Navbar = () => {
 		}`
 			}
 		>
-			<nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+			<nav className="container relative flex flex-wrap items-center justify-between pt-4 pb-4 mx-auto lg:justify-between xl:pl-16 pr-16">
 				{/* Logo  */}
 				<Disclosure>
 					{({ open }) => (
