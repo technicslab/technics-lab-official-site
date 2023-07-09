@@ -25,7 +25,7 @@ const apiGET = async (api) => {
 		throw new Error("API request failed");
 	}
 	res=await res.json();
-	return res
+	return res;
 };
 
 const apiPUT = async (api, body) => {
