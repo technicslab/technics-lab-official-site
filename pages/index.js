@@ -16,7 +16,12 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getCompanyDetails, getFAQs, getProjects, getTestimonials,   } from "./endpoints/index";
+import {
+	getCompanyDetails,
+	getFAQs,
+	getProjects,
+	getTestimonials,
+} from "./api/index";
 
 const Home = ({ faqData, testimonialsData, projects }) => {
 	return (
@@ -39,8 +44,8 @@ const Home = ({ faqData, testimonialsData, projects }) => {
 					title=" Why should you join us"
 				>
 					{JSON.stringify(faqData)}
-        Join us and unlock the potential of these cutting-edge services to
-        accelerate your business growth and achieve your goals.
+          Join us and unlock the potential of these cutting-edge services to
+          accelerate your business growth and achieve your goals.
 				</SectionTitle>
 
 				<Services data={benefitOne} />
@@ -64,8 +69,7 @@ const Home = ({ faqData, testimonialsData, projects }) => {
 					id={"Projects"}
 					pretitle="projects"
 					title="Every thing is possible with great team"
-				>
-				</SectionTitle>
+				></SectionTitle>
 
 				<ProjectSection projects={projects} />
 
@@ -85,14 +89,14 @@ const Home = ({ faqData, testimonialsData, projects }) => {
 					pretitle="Testimonials"
 					title="Here's what our customers said"
 				>
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+          Testimonails is a great way to increase the brand trust and awareness.
+          Use this section to highlight your popular customers.
 				</SectionTitle>
-				<Testimonials testimonialsData={testimonialsData}/>
+				<Testimonials testimonialsData={testimonialsData} />
 
 				<SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+          Answer your customers possible questions here, it will increase the
+          conversion rate as well as support or chat requests.
 				</SectionTitle>
 				<Faq faqData={faqData} />
 				<ContactUsSection />
@@ -100,14 +104,13 @@ const Home = ({ faqData, testimonialsData, projects }) => {
 				<UpWidget />
 				<PopupWidget />
 			</div>
-			
 		</div>
 	);
 };
 export const getServerSideProps = async () => {
 	try {
 		const faqData = await getFAQs();
-		const testimonialsData=await getTestimonials();
+		const testimonialsData = await getTestimonials();
 		const companyData = await getCompanyDetails();
 		const projects = await getProjects();
 
@@ -115,8 +118,8 @@ export const getServerSideProps = async () => {
 			props: {
 				faqData: faqData || null,
 				companyData: companyData || null,
-				testimonialsData:testimonialsData || null,
-				projects
+				testimonialsData: testimonialsData || null,
+				projects,
 			},
 		};
 	} catch (error) {
@@ -125,11 +128,10 @@ export const getServerSideProps = async () => {
 			props: {
 				faqData: null,
 				companyData: null,
-				testimonialsData:null
+				testimonialsData: null,
 			},
 		};
 	}
 };
-
 
 export default Home;

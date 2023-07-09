@@ -1,7 +1,7 @@
 import Elements from "../../components/Elements";
 import SectionTitle from "../../components/sectionTitle";
 import React from "react";
-import { getProjects } from "../endpoints";
+import { getProjects } from "../api";
 
 const ProjectDetailPage = ({ project }) => {
 	return (
@@ -17,7 +17,9 @@ const ProjectDetailPage = ({ project }) => {
 						{[1, 2, 3]?.map((imageUrl, index) => (
 							<img
 								key={index}
-								src={"https://res.cloudinary.com/dkmg7bddr/image/upload/c_thumb,g_auto,h_300,w_300/event_2_pmxj0l.png"}
+								src={
+									"https://res.cloudinary.com/dkmg7bddr/image/upload/c_thumb,g_auto,h_300,w_300/event_2_pmxj0l.png"
+								}
 								alt={`Project ${index + 1} ${imageUrl}`}
 								className="w-full h-48 object-cover rounded-lg"
 							/>
