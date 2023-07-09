@@ -1,103 +1,44 @@
 import React from "react";
-import {
-	BanknotesIcon,
-	UserPlusIcon,
-	WrenchScrewdriverIcon,
-} from "@heroicons/react/24/solid";
+import Image from "next/image";
+import CountUp from 'react-countup';
 
-const StatsSection = () => {
+const StatsSection = ({stats}) => {
+
+	const myLoader=({src})=>{
+    return src;
+  }
+	
 	return (
-		<section className=" py-16 mb-32 " style={{ marginTop: "-80px" }}>
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-					{/* Revenue Generated */}
-					<div className="bg-white dark:bg-gray-700 overflow-hidden shadow rounded-lg">
-						<div className="px-4 py-5 sm:p-6">
-							<div className="flex items-center">
-								<div className="flex-shrink-0">
-									<svg
-										className="h-6 w-6 text-gray-400"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<BanknotesIcon />
-									</svg>
-								</div>
-								<div className="ml-5 w-0 flex-1">
-									<dl>
-										<dt className="text-sm font-medium text-gray-500 truncate dark:text-gray-400">
-                      Revenue Generated
-										</dt>
-										<dd className="flex items-baseline">
-											<div className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
-                        $1,234,567
-											</div>
-										</dd>
-									</dl>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="bg-white dark:bg-gray-700 overflow-hidden shadow rounded-lg">
-						<div className="px-4 py-5 sm:p-6">
-							<div className="flex items-center">
-								<div className="flex-shrink-0">
-									<svg
-										className="h-6 w-6 text-gray-400"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<UserPlusIcon />
-									</svg>
-								</div>
-								<div className="ml-5 w-0 flex-1">
-									<dl>
-										<dt className="text-sm font-medium text-gray-500 truncate dark:text-gray-400">
-                      Clients Worked With
-										</dt>
-										<dd className="flex items-baseline">
-											<div className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
-                        50
-											</div>
-										</dd>
-									</dl>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="bg-white dark:bg-gray-700 overflow-hidden shadow rounded-lg">
-						<div className="px-4 py-5 sm:p-6">
-							<div className="flex items-center">
-								<div className="flex-shrink-0">
-									<svg
-										className="h-6 w-6 text-gray-400"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<WrenchScrewdriverIcon></WrenchScrewdriverIcon>
-									</svg>
-								</div>
-								<div className="ml-5 w-0 flex-1">
-									<dl>
-										<dt className="text-sm font-medium text-gray-500 truncate dark:text-gray-400">
-                      Deployed Projects
-										</dt>
-										<dd className="flex items-baseline">
-											<div className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
-                        100
-											</div>
-										</dd>
-									</dl>
-								</div>
-							</div>
-						</div>
+
+				<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+					<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+						{
+								stats && stats.map((s,i)=>{
+									return(
+										<div className="text-center" key={i}>
+										<div className="flex items-center justify-center w-10 h-10 mx-auto mb-3 rounded-full bg-teal-accent-400 sm:w-12 sm:h-12">
+											<Image loader={myLoader} src={s.attributes.icon} width={50} height={50} alt="icon" />
+										</div>
+										<h6 className="text-4xl font-bold text-indigo-600 uppercase lg:text-4xl">
+											<CountUp
+											end={s.attributes.count}
+											start={0}
+											duration={5}
+											>
+											</CountUp>
+										</h6>
+										<p className="mb-2 font-bold text-md">{s.attributes.title}</p>
+										<p className="text-gray-700">
+											{s.attributes.description}
+										</p>
+									</div>
+									)
+								})
+						}
+
+						
 					</div>
 				</div>
-			</div>
-		</section>
 	);
 };
 
