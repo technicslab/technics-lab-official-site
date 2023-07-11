@@ -32,7 +32,9 @@ const StatsSection = ({ stats }) => {
                   ></CountUp>
                 </h6>
                 <p className="mb-2 font-bold text-md">{s.attributes.title}</p>
-                <p className="text-gray-700">{s.attributes.description}</p>
+                <p className="text-gray-700 dark:text-white">
+                  {s.attributes.description}
+                </p>
               </div>
             );
           })}
