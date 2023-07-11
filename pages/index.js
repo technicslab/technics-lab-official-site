@@ -16,127 +16,121 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import {
-  getCompanyDetails,
-  getFAQs,
-  getProjects,
-  getStats,
-  getTestimonials,
-} from "./api/index";
+import { getProjects, getStats, getTestimonials } from "./api/index";
 
 const Home = ({ faqData, testimonialsData, projects, stats }) => {
-  return (
-    <div>
-      <Head>
-        <title>Technics Lab</title>
-        <meta
-          name="description"
-          content="Quality Precision Deadlines met. Our talented team ensures your project exceeds expectations.
+	return (
+		<div>
+			<Head>
+				<title>Technics Lab</title>
+				<meta
+					name="description"
+					content="Quality Precision Deadlines met. Our talented team ensures your project exceeds expectations.
           Expertise across diverse fields. Unleashing desired"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
-      <div className="lg:p-16 sm:p-4">
-        <Hero />
-        <SectionTitle
-          id={"Services"}
-          pretitle="Services"
-          title=" Why should you join us"
-        >
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<Navbar />
+			<div className="lg:p-16 sm:p-4">
+				<Hero />
+				<SectionTitle
+					id={"Services"}
+					pretitle="Services"
+					title=" Why should you join us"
+				>
           Join us and unlock the potential of these cutting-edge services to
           accelerate your business growth and achieve your goals.
-        </SectionTitle>
+				</SectionTitle>
 
-        <Services data={benefitOne} />
-        <SectionTitle
-          id={"Benefits"}
-          pretitle="Benefits"
-          title="Let us provide you with more value"
-        >
-          {/* new stuff can be added  */}
-        </SectionTitle>
+				<Services data={benefitOne} />
+				<SectionTitle
+					id={"Benefits"}
+					pretitle="Benefits"
+					title="Let us provide you with more value"
+				>
+					{/* new stuff can be added  */}
+				</SectionTitle>
 
-        <Benefits imgPos="right" data={benefitTwo} />
-        <SectionTitle
-          id={"Company-Stats"}
-          pretitle="Company Stats"
-          title="Numbers that Speak: Unleashing the Force of Our Company Stats!"
-        ></SectionTitle>
-        <StatsSection stats={stats} />
+				<Benefits imgPos="right" data={benefitTwo} />
+				<SectionTitle
+					id={"Company-Stats"}
+					pretitle="Company Stats"
+					title="Numbers that Speak: Unleashing the Force of Our Company Stats!"
+				></SectionTitle>
+				<StatsSection stats={stats} />
 
-        <SectionTitle
-          id={"Projects"}
-          pretitle="projects"
-          title="Every thing is possible with great team"
-        ></SectionTitle>
+				<SectionTitle
+					id={"Projects"}
+					pretitle="projects"
+					title="Every thing is possible with great team"
+				></SectionTitle>
 
-        <ProjectSection projects={projects} />
+				<ProjectSection projects={projects} />
 
-        <ServicesSection />
+				<ServicesSection />
 
-        <SectionTitle
-          id={"Company"}
-          pretitle="Team"
-          title="Every thing is possible with great team"
-        >
-          {/* new stuff can be added  */}
-        </SectionTitle>
+				<SectionTitle
+					id={"Company"}
+					pretitle="Team"
+					title="Every thing is possible with great team"
+				>
+					{/* new stuff can be added  */}
+				</SectionTitle>
 
-        <TeamSection />
+				<TeamSection />
 
-        <SectionTitle
-          pretitle="Testimonials"
-          title="Here's what our customers said"
-        >
+				<SectionTitle
+					pretitle="Testimonials"
+					title="Here's what our customers said"
+				>
           Testimonails is a great way to increase the brand trust and awareness.
           Use this section to highlight your popular customers.
-        </SectionTitle>
-        <Testimonials testimonialsData={testimonialsData} />
+				</SectionTitle>
+				<Testimonials testimonialsData={testimonialsData} />
 
-        <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
+				<SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
           Answer your customers possible questions here, it will increase the
           conversion rate as well as support or chat requests.
-        </SectionTitle>
-        <Faq faqData={faqData} />
-        <ContactUsSection />
-        <Footer />
-        <UpWidget />
-        <PopupWidget />
-      </div>
-    </div>
-  );
+				</SectionTitle>
+				<Faq faqData={faqData} />
+				<ContactUsSection />
+				<Footer />
+				<UpWidget />
+				<PopupWidget />
+			</div>
+		</div>
+	);
 };
 export const getServerSideProps = async () => {
-  try {
-    const faqData = [
-      {
-        question: "What services do you offer?",
-        answer:
+	try {
+		const faqData = [
+			{
+				question: "What services do you offer?",
+				answer:
           "We offer a wide range of services including web development, mobile app development, Smart Contract with Blockchain, and Software Prototyping",
-      },
-    ];
-    const testimonialsData = await getTestimonials();
-    const projects = await getProjects();
-    const stats = await getStats();
+			},
+		];
+		const testimonialsData = await getTestimonials();
+		const projects = await getProjects();
+		const stats = await getStats();
 
-    return {
-      props: {
-        faqData: faqData || null,
-        testimonialsData: testimonialsData || null,
-        projects: projects || null,
-        stats: stats || null,
-      },
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return {
-      props: {
-        faqData: null,
-        testimonialsData: null,
-      },
-    };
-  }
+		return {
+			props: {
+				faqData: faqData || null,
+				testimonialsData: testimonialsData || null,
+				projects: projects || null,
+				stats: stats || null,
+			},
+		};
+	} catch (error) {
+		console.error("Error fetching data:", error);
+		return {
+			props: {
+				faqData: null,
+				testimonialsData: null,
+			},
+		};
+	}
 };
 
 export default Home;
