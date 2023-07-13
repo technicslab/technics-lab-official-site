@@ -2,7 +2,15 @@ import React from "react";
 import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
-const Faq = ({ faqData }) => {
+const Faq = () => {
+	const faqData = [
+		{
+			question: "What services do you offer?",
+			answer:
+        "We offer a wide range of services including web development, mobile app development, Smart Contract with Blockchain, and Software Prototyping",
+		},
+	];
+
 	return (
 		<Container className="!p-0">
 			<div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">

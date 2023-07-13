@@ -6,7 +6,7 @@ import React from "react";
 import { benefitOne, benefitTwo } from "../components/data";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
+// import Testimonials from "../components/testimonials";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import Services from "../components/services";
@@ -16,9 +16,9 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getProjects, getStats, getTestimonials } from "./api/index";
+import { getProjects } from "./api/index";
 
-const Home = ({ faqData, testimonialsData, projects, stats }) => {
+const Home = ({ projects }) => {
 	return (
 		<div>
 			<Head>
@@ -57,7 +57,7 @@ const Home = ({ faqData, testimonialsData, projects, stats }) => {
 					pretitle="Company Stats"
 					title="Numbers that Speak: Unleashing the Force of Our Company Stats!"
 				></SectionTitle>
-				<StatsSection stats={stats} />
+				<StatsSection />
 
 				<SectionTitle
 					id={"Projects"}
@@ -86,13 +86,13 @@ const Home = ({ faqData, testimonialsData, projects, stats }) => {
           Testimonails is a great way to increase the brand trust and awareness.
           Use this section to highlight your popular customers.
 				</SectionTitle>
-				<Testimonials testimonialsData={testimonialsData} />
+				{/* <Testimonials testimonialsData={testimonialsData} /> */}
 
 				<SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
           Answer your customers possible questions here, it will increase the
           conversion rate as well as support or chat requests.
 				</SectionTitle>
-				<Faq faqData={faqData} />
+				<Faq />
 				<ContactUsSection />
 				<Footer />
 				<UpWidget />
@@ -103,31 +103,23 @@ const Home = ({ faqData, testimonialsData, projects, stats }) => {
 };
 export const getServerSideProps = async () => {
 	try {
-		const faqData = [
-			{
-				question: "What services do you offer?",
-				answer:
-          "We offer a wide range of services including web development, mobile app development, Smart Contract with Blockchain, and Software Prototyping",
-			},
-		];
-		const testimonialsData = await getTestimonials();
 		const projects = await getProjects();
-		const stats = await getStats();
-
 		return {
 			props: {
-				faqData: faqData || null,
-				testimonialsData: testimonialsData || null,
-				projects: projects || null,
-				stats: stats || null,
+				projects,
+				// faqData: faqData,
 			},
 		};
 	} catch (error) {
-		console.error("Error fetching data:", error);
+		// console.error("Error fetching data:", error);
 		return {
 			props: {
-				faqData: null,
-				testimonialsData: null,
+				data: "any data",
+
+				// faqData: faqData,
+				// projects: projects,
+				// stats,
+				// testimonialsData: null,
 			},
 		};
 	}
