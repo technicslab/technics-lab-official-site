@@ -65,6 +65,7 @@ const Home = ({ projects }) => {
 					title="Every thing is possible with great team"
 				></SectionTitle>
 
+				{/* {JSON.stringify({ data: "sahi", projects })} */}
 				<ProjectSection projects={projects} />
 
 				<ServicesSection />
@@ -104,10 +105,10 @@ const Home = ({ projects }) => {
 export const getServerSideProps = async () => {
 	try {
 		const projects = await getProjects();
+		console.log(projects, "projects");
 		return {
 			props: {
 				projects,
-				// faqData: faqData,
 			},
 		};
 	} catch (error) {

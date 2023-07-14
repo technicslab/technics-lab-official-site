@@ -12,6 +12,9 @@ const getIconComponent = (iconName) => {
 			return <Instagram />;
 		case "Linkedin":
 			return <Linkedin />;
+		case "Youtube":
+			return <Youtube />;
+
 		default:
 			return null;
 	}
@@ -21,19 +24,19 @@ export default function Footer() {
 	const socialMediaLinks = [
 		{
 			name: "Twitter",
-			href: "https://twitter.com/web3templates",
+			href: "https://twitter.com/Technicslab2023",
 			icon: "Twitter",
 			hoverClass: "hover:text-blue-400",
 		},
 		{
 			name: "Facebook",
-			href: "https://facebook.com/web3templates",
+			href: "https://web.facebook.com/people/Technics-Lab/100094933652134/",
 			icon: "Facebook",
 			hoverClass: "hover:text-blue-500",
 		},
 		{
 			name: "Instagram",
-			href: "https://instagram.com",
+			href: "https://www.instagram.com/technicslabmanagment/",
 			icon: "Instagram",
 			hoverClass: "hover:text-orange-600",
 		},
@@ -42,6 +45,12 @@ export default function Footer() {
 			href: "https://www.linkedin.com/in/technics-lab-b25042247",
 			icon: "Linkedin",
 			hoverClass: "hover:text-blue-600",
+		},
+		{
+			name: "Youtube",
+			href: "https://www.youtube.com/channel/UCfQMEoeA8x8P1pvCF6ghN7g",
+			icon: "Youtube",
+			hoverClass: "hover:text-red-600",
 		},
 	];
 
@@ -194,5 +203,17 @@ const Linkedin = ({ size = 24 }) => (
 		fill="currentColor"
 	>
 		<path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.27 20.1H3.65V9.24h3.62V20.1zM5.47 7.76h-.03c-1.22 0-2-.83-2-1.87 0-1.06.8-1.87 2.05-1.87 1.24 0 2 .8 2.02 1.87 0 1.04-.78 1.87-2.05 1.87zM20.34 20.1h-3.63v-5.8c0-1.45-.52-2.45-1.83-2.45-1 0-1.6.67-1.87 1.32-.1.23-.11.55-.11.88v6.05H9.28s.05-9.82 0-10.84h3.63v1.54a3.6 3.6 0 0 1 3.26-1.8c2.39 0 4.18 1.56 4.18 4.89v6.21z" />
+	</svg>
+);
+const Youtube = ({ size = 24 }) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={size}
+		height={size}
+		fill="currentColor"
+		className="bi bi-youtube"
+		viewBox="0 0 16 16"
+	>
+		<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />{" "}
 	</svg>
 );
