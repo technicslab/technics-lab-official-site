@@ -16,8 +16,6 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
-import { getProjects } from "./api/index";
-
 const Home = ({ projects }) => {
 	return (
 		<div>
@@ -103,27 +101,30 @@ const Home = ({ projects }) => {
 	);
 };
 export const getServerSideProps = async () => {
-	try {
-		const projects = await getProjects();
-		console.log(projects, "projects");
-		return {
-			props: {
-				projects,
+	const projects = [
+		{
+			id: 1,
+			attributes: {
+				title: "Event Planner",
+				description:
+          "The Event Planner is a feature-rich application developed using React Native and Flutter, with a robust backend built on Node.js. ",
+				tech_stack: "Mongo, Nodejs, Socket-io, React-Native, Flutter",
+				date: "2021-10-01",
+				link: null,
+				createdAt: "2023-07-09T12:27:43.864Z",
+				updatedAt: "2023-07-13T15:59:37.928Z",
+				publishedAt: "2023-07-09T08:03:57.366Z",
+				thumbnail:
+          "https://res.cloudinary.com/dkmg7bddr/image/upload/f_auto,q_auto/event_2_pmxj0l",
+				demo: null,
 			},
-		};
-	} catch (error) {
-		// console.error("Error fetching data:", error);
-		return {
-			props: {
-				data: "any data",
-
-				// faqData: faqData,
-				// projects: projects,
-				// stats,
-				// testimonialsData: null,
-			},
-		};
-	}
+		},
+	];
+	return {
+		props: {
+			projects,
+		},
+	};
 };
 
 export default Home;
