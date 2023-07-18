@@ -1,6 +1,8 @@
 {
   "editor.tabSize": 2,
   "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
+  "editor.trimAutoWhitespace": true,
 
   "eslint.options": {
     "configFile": ".eslintrc.js"

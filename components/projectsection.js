@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+/* eslint-disable no-mixed-spaces-and-tabs */
+
 export const ProjectCard = ({ id, project }) => {
 	const { title, description, tech_stack, date } = project;
 	const options = { month: "short", year: "numeric" };
@@ -22,7 +24,9 @@ export const ProjectCard = ({ id, project }) => {
 			<div className="bg-white rounded-lg shadow-lg overflow-hidden">
 				<div className="relative">
 					<img
-						src={"https://res.cloudinary.com/dkmg7bddr/image/upload/c_thumb,g_auto,h_300,w_300/event_2_pmxj0l.png"}
+						src={
+							"https://res.cloudinary.com/dkmg7bddr/image/upload/c_thumb,g_auto,h_300,w_300/event_2_pmxj0l.png"
+						}
 						alt={title}
 						className="w-full h-48 object-cover transition-opacity hover:opacity-100 duration-300"
 						style={{ opacity: "0.9" }}
@@ -60,13 +64,17 @@ export const ProjectRow = ({ projects }) => {
 			</div>
 
 			<div className="flex flex-wrap -mx-4">
-				{projects && projects.length>0 && projects.slice(0, 4).map((project, index) => (
-					<ProjectCard
-						key={index}
-						id={project.id}
-						project={project.attributes}
-					/>
-				))}
+				{projects &&
+          projects.length > 0 &&
+          projects
+          	.slice(0, 4)
+          	.map((project, index) => (
+          		<ProjectCard
+          			key={index}
+          			id={project.id}
+          			project={project.attributes}
+          		/>
+          	))}
 			</div>
 		</div>
 	);
@@ -79,5 +87,6 @@ const ProjectSection = ({ projects }) => {
 		</div>
 	);
 };
+/* eslint-disable no-mixed-spaces-and-tabs */
 
 export default ProjectSection;
