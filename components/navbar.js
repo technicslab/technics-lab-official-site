@@ -7,8 +7,11 @@ import React from "react";
 import { Transition } from "@headlessui/react";
 import { Link as LinkScroll } from "react-scroll";
 import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
+	const { setTheme } = useTheme();
+
 	const router = useRouter().route;
 	const navigation = ["Services","Benifits","Stats","Testimonials", "Projects", "FAQs", "Team"];
 	const [scrollActive, setScrollActive] = useState(false);
@@ -17,6 +20,8 @@ const Navbar = () => {
 		window.addEventListener("scroll", () => {
 			setScrollActive(window.scrollY > 30);
 		});
+
+		setTheme("light");
 	}, []);
 
 	return (
