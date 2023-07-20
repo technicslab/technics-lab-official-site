@@ -22,10 +22,12 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
     indent: ["error", "tab", { SwitchCase: 1 }],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
+    "no-mixed-spaces-and-tabs": "off",
     semi: ["error", "always"],
   },
   settings: {
