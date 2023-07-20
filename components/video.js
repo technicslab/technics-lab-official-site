@@ -16,7 +16,7 @@ const Video = () => {
 								xmlns="http://www.w3.org/2000/svg"
 								className="w-16 h-16  lg:w-28 lg:h-28"
 								viewBox="0 0 20 20"
-								fill="currentColor"
+								fill="#2093DF"
 							>
 								<path
 									fillRule="evenodd"

@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
 	const router = useRouter().route;
-	const navigation = ["Products", "Services", "Benefits", "Team"];
+	const navigation = ["Services","Benifits","Stats","Testimonials", "Projects", "FAQs", "Team"];
 	const [scrollActive, setScrollActive] = useState(false);
 
 	useEffect(() => {
@@ -23,33 +23,30 @@ const Navbar = () => {
 		<div
 			className={
 				// eslint-disable-line no-mixed-spaces-and-tabs
-				`fixed top-0 w-full z-30 bg-white-500 transition-all bg-slate-100 
-        ${
-		scrollActive
-			? "shadow-md pt-0 bg-slate-200 dark:bg-trueGray-800"
-			: "pt-4"
-		}`
+				`top-0 w-full z-30 bg-white-500 transition-all bg-slate-100 
+        ${scrollActive
+					? "shadow-md pt-0 bg-slate-200 dark:bg-trueGray-800"
+					: "pt-4"
+				}`
 			}
 		>
-			<nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+			<nav className="container relative flex flex-wrap items-center justify-between py-4 px-8 mx-auto lg:justify-between xl:px-8">
 				{/* Logo  */}
 				<Disclosure>
 					{({ open }) => (
 						<>
 							<div className="flex flex-wrap items-center justify-between w-full lg:w-auto ">
 								<Link href="/">
-									<span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-										<span>
-											<Image
-												src="/img/logo.svg"
-												alt="N"
-												width="32"
-												height="32"
-												className="w-8"
-											/>
-										</span>
-										<span>Technics Lab</span>
-									</span>
+
+
+									<Image
+										src="/img/tl_logo.png"
+										alt="N"
+										width="200"
+										height="200"
+									/>
+
+
 								</Link>
 
 								<Disclosure.Button
@@ -100,9 +97,9 @@ const Navbar = () => {
 											))}
 											<Link
 												href="#contact"
-												className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
+												className="w-full px-6 py-2 mt-3 text-center text-white bg-[#2093DF] rounded-md lg:ml-5 hover:bg-indigo-500 focus:bg-indigo-500 ease"
 											>
-                        Contact Us
+												Contact Us
 											</Link>
 										</>
 									</Disclosure.Panel>
@@ -123,7 +120,7 @@ const Navbar = () => {
 										duration={1500}
 										to={`${menu}`}
 										className={
-											"cursor-pointer inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+											"cursor-pointer inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-[#2093DF] focus:text-[#2093DF] focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
 										}
 									>
 										{menu}
@@ -149,9 +146,9 @@ const Navbar = () => {
 						smooth={true}
 						duration={1200}
 						to="contact"
-						className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5 cursor-pointer"
+						className="px-6 py-2 text-white bg-[#2093DF] rounded-md md:ml-5 cursor-pointer hover:bg-indigo-500 focus:bg-indigo-500 ease"
 					>
-            Contact Us
+						Contact Us
 					</LinkScroll>
 
 					{/* <ThemeChanger /> */}

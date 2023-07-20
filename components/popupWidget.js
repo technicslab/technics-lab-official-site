@@ -50,7 +50,7 @@ const PopupWidget = () => {
 			<Disclosure>
 				{({ open }) => (
 					<>
-						<Disclosure.Button className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
+						<Disclosure.Button className="fixed z-40 flex items-center justify-center transition duration-300 bg-[#2093DF] hover:bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-[#2093DF] focus:bg-[#2093DF] ease">
 							<span className="sr-only">Open Contact form Widget</span>
 							<Transition
 								show={!open}
@@ -109,7 +109,7 @@ const PopupWidget = () => {
 							leaveTo="opacity-0 translate-y-5"
 						>
 							<Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
-								<div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
+								<div className="flex flex-col items-center justify-center h-32 p-5 bg-[#2093DF]">
 									<h3 className="text-lg text-white">How can we help?</h3>
 									<p className="text-white opacity-50">
                     We usually respond in a few hours
@@ -231,7 +231,7 @@ const PopupWidget = () => {
 											<div className="mb-3">
 												<button
 													type="submit"
-													className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+													className="w-full px-3 py-4 text-white bg-[#2093DF] rounded-md focus:bg-[#2093DF] focus:outline-none"
 												>
 													{isSubmitting ? (
 														<svg
@@ -300,7 +300,7 @@ const PopupWidget = () => {
 												</h3>
 												<p className="text-gray-700 md:px-3">{Message}</p>
 												<button
-													className="mt-6 text-indigo-600 focus:outline-none"
+													className="mt-6 text-[#2093DF] focus:outline-none"
 													onClick={() => reset()}
 												>
                           Go back
@@ -331,7 +331,7 @@ const PopupWidget = () => {
 											</h3>
 											<p className="text-gray-700 md:px-3">{Message}</p>
 											<button
-												className="mt-6 text-indigo-600 focus:outline-none"
+												className="mt-6 text-[#2093DF] focus:outline-none"
 												onClick={() => reset()}
 											>
                         Go back

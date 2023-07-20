@@ -40,7 +40,7 @@ const ContactUsSection = () => {
 	return (
 		<section className="py-16 " id="contact">
 			<div className="container mx-auto px-4">
-				<h2 className="text-3xl text-center font-semibold text-gray-800 dark:text-white mb-8">
+				<h2 className="text-3xl text-center font-semibold text-gray-800 dark:text-white mb-8 hover:bg-indigo-500">
           Contact Us
 				</h2>
 				<div className="max-w-3xl mx-auto">
@@ -138,7 +138,7 @@ const ContactUsSection = () => {
 						<div className="text-center">
 							<button
 								type="submit"
-								className="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+								className="px-6 py-2 bg-[#2093DF] text-white rounded-md hover:bg-indigo-700"
 							>
                 Submit
 							</button>

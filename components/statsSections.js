@@ -77,7 +77,7 @@ const StatsSection = () => {
 	];
 
 	return (
-		<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+		<div id="Stats" className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 			<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 				{stats?.map((state, i) => {
 					return (
@@ -85,7 +85,7 @@ const StatsSection = () => {
 							<div className="flex items-center justify-center w-10 h-10 mx-auto mb-3 rounded-full bg-teal-accent-400 sm:w-12 sm:h-12">
 								{getIconComponent(state.attributes.title)}
 							</div>
-							<h6 className="text-4xl font-bold text-indigo-600 uppercase lg:text-4xl">
+							<h6 className="text-4xl font-bold text-[#2093DF] uppercase lg:text-4xl">
 								<CountUp
 									end={state?.attributes?.count}
 									start={0}

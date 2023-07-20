@@ -4,34 +4,29 @@ import Container from "./container";
 import { useEffect } from "react";
 import Aos from "aos";
 
-const Services = (props) => {
+import styles from "../css/services.module.css";
+import clsx from "clsx";
+
+const Services = () => {
 	useEffect(() => {
 		Aos.init();
 	});
 	const services = [
 		{
-			title: "Custom Software Development",
+			title: "AI and Blockchain",
 			svg: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					strokeWidth="1.5"
-					stroke="currentColor"
-					className="w-6 h-6"
-				>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"
-					/>
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
 				</svg>
+
+
 			),
-			paragraph:
-        "We specialize in building custom software solutions tailored to meet your specific business needs.",
+			paragraph: <span>
+				Empowering the future with AI and Blockchain. Offering custom Chat Bots and apps with<strong>LLMs </strong> and <strong>OpenAI</strong>. Dapps, NFTs and Crypto apps with <strong>Ethereum</strong>.",
+			</span>
 		},
 		{
-			title: "Web Application Development",
+			title: "Web App Development",
 			svg: (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -48,11 +43,12 @@ const Services = (props) => {
 					/>
 				</svg>
 			),
-			paragraph:
-        "We specialize in building custom software solutions tailored to meet your specific business needs.",
+			paragraph: <span>
+				Elevate your digital presence with our Web Application Development expertise. Engaging <strong>MERN</strong> Stack, <strong>MEAN</strong> Stack, and <strong>JAM</strong> stack solutions that captivate users.",
+			</span>
 		},
 		{
-			title: "Mobile Application Development",
+			title: "Mobile App Development",
 			svg: (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -70,111 +66,66 @@ const Services = (props) => {
 				</svg>
 			),
 			paragraph:
-        "Our mobile app development services cover both iOS and Android platforms, ensuring a seamless user experience.",
+				<span>
+					Turn your ideas into reality with our Mobile App Development services offering user-friendly and feature-rich apps for Android <strong>(Java & Kotlin)</strong> and iOS <strong>(Swift & React Native)</strong> platforms.
+				</span>
 		},
 		{
-			title: "Software Prototyping",
+			title: "UI/UX and Graphic Design",
 			svg: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					strokeWidth="1.5"
-					stroke="currentColor"
-					className="w-6 h-6"
-				>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"
-					/>
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
 				</svg>
+
 			),
 
 			paragraph:
-        "We offer software prototyping services to help you visualize and validate your product ideas before development.",
-		},
-
-		{
-			title: "Daps",
-			svg: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					strokeWidth="1.5"
-					stroke="currentColor"
-					className="w-6 h-6"
-				>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-					/>
-				</svg>
-			),
-			paragraph:
-        "Our Data Analysis and Processing Services (DAPS) help you gain valuable insights from your data.",
+				<span>
+					Discover our UI/UX Design services, utilizing top tools like <strong>Adobe XD, Sketch, Figma, and InVision</strong>. We'll create captivating visuals and seamless user experiences for your success.
+				</span>
 		},
 	];
 
-	const { data } = props;
 	return (
 		<>
-			<Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
-				<div
-					className={`flex items-center justify-center w-full lg:w-1/2 ${
-						props.imgPos === "right" ? "lg:order-1" : ""
-					}`}
-				>
-					<div>
-						<Image
-							src={data.image}
-							width="521"
-							height="auto"
-							alt="Benefits"
-							className={"object-cover"}
-							placeholder="blur"
-							blurDataURL={data.image.src}
-						/>
-					</div>
+			<Container className="flex flex-wrap mb-20  ">
+
+
+				<div className={clsx("w-full", styles.card__container)}>
+
+					{services.map((service, index) => (
+						<ServiceCard key={index} title={service.title} desc={service.paragraph} icon={service.svg} />
+					))}
 				</div>
 
-				<div
-					className={`flex flex-wrap items-center w-full lg:w-1/2 ${
-						data.imgPos === "right" ? "lg:justify-end" : ""
-					}`}
-				>
-					<div>
-						<div className="flex flex-col w-full mt-4">
-							<h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-								{data.title}
-							</h3>
-
-							<p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-								{data.desc}
-							</p>
-						</div>
-
-						<div className="w-full mt-5">
-							{services.map((service, index) => (
-								<Service key={index} title={service.title} icon={service.svg}>
-									{service.paragraph}
-								</Service>
-							))}
-						</div>
-					</div>
-				</div>
 			</Container>
 		</>
 	);
 };
 
+const ServiceCard = ({ title, desc, icon }) => {
+	return (
+		<div className={clsx(styles.card__bx, styles.card__1)}>
+			<div className={styles.card__data}>
+				<div className={styles.card__icon}>
+					<div className={styles.card__icon_box}>
+						{icon}
+					</div>
+				</div>
+				<div className={styles.card__content}>
+					<h3>{title}</h3>
+					<p>{desc}</p>
+					{/* <a href="#">Read More</a> */}
+				</div>
+			</div>
+		</div>
+	)
+}
 function Service(props) {
 	return (
 		<>
 			<div className="flex items-start mt-8 space-x-3">
-				<div className="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
+				<div className="flex items-center justify-center flex-shrink-0 mt-1 bg-[#2093DF] rounded-md w-11 h-11 ">
 					{React.cloneElement(props.icon, {
 						className: "w-7 h-7 text-indigo-50",
 					})}
