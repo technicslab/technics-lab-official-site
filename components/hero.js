@@ -10,7 +10,7 @@ const Hero = () => {
 	});
 	return (
 		<>
-			<Container className="flex flex-wrap mt-24">
+			<Container className="flex flex-wrap">
 				<div className="flex items-center w-full lg:w-1/2">
 					<div
 						className="max-w-2xl mb-8"
@@ -37,7 +37,7 @@ const Hero = () => {
 								href="https://calendly.com/technics-lab-managment/30min"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
+								className="px-8 py-4 text-lg font-medium text-center text-white bg-[#2093DF] rounded-md hover:bg-indigo-500 focus:bg-indigo-500 ease"
 							>
                 Let&apos;s Meet
 							</a>

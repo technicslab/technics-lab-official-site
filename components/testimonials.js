@@ -6,13 +6,30 @@ import Image from "next/image";
 import styles from "../css/testimonials.module.css";
 import clsx from "clsx";
 
-const Testimonials = ({ testimonialsData }) => {
+const Testimonials = () => {
+
+	let testimonialsData=[
+		{
+			company:"Sound M&D",
+			video:"https://res.cloudinary.com/dkmg7bddr/video/upload/v1688925069/official-site-cms/testimonials/Technislab-rick_alte3m.mp4",
+			name:"Rick Hare",
+			designation:"Co-Founder Sound M&D",
+			profile_image:"https://res.cloudinary.com/dkmg7bddr/image/upload/v1688925052/official-site-cms/testimonials/rick_k2e1kr.png"
+		},
+		{
+			company:"United Airlines",
+			video:"https://res.cloudinary.com/dkmg7bddr/video/upload/v1689854648/Armando_e6ubcv.mp4",
+			name:"Armando Richardson",
+			designation:"Network Engineer",
+			profile_image:"https://res.cloudinary.com/dkmg7bddr/image/upload/v1689854872/armando_v0q2ex.png"
+		}
+	];
 	useEffect(() => {
 		AOS.init();
 	}, []);
 
 	return (
-		<Container id={"Products"}>
+		<Container id={"Testimonials"}>
 			<WithSpeechBubbles testimonialsData={testimonialsData} />
 		</Container>
 	);
@@ -69,20 +86,20 @@ function WithSpeechBubbles({ testimonialsData }) {
 							<Testimonial key={item.id}>
 								<TestimonialContent>
 									<TestimonialHeading>
-										{item.attributes.company}
+										{item.company}
 									</TestimonialHeading>
 									<video
 										className={styles.videoContainer}
 										controls
 										controlsList="nodownload"
 									>
-										<source src={item.attributes.video} type="video/mp4" />
+										<source src={item.video} type="video/mp4" />
 									</video>
 								</TestimonialContent>
 								<TestimonialAvatar
-									src={item.attributes.profile_image}
-									name={item.attributes.name}
-									title={item.attributes.designation}
+									src={item.profile_image}
+									name={item.name}
+									title={item.designation}
 								/>
 							</Testimonial>
 						);

@@ -3,7 +3,7 @@ import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 import React from "react";
-import { benefitOne, benefitTwo } from "../components/data";
+import { benefitTwo } from "../components/data";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
 // import Testimonials from "../components/testimonials";
@@ -16,6 +16,7 @@ import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
 import StatsSection from "../components/statsSections";
 import UpWidget from "../components/upWidget";
+import Testimonials from "../components/testimonials";
 const Home = ({ projects }) => {
 	return (
 		<div>
@@ -34,13 +35,13 @@ const Home = ({ projects }) => {
 				<SectionTitle
 					id={"Services"}
 					pretitle="Services"
-					title=" Why should you join us"
+					title=" Why you should choose us?"
 				>
           Join us and unlock the potential of these cutting-edge services to
           accelerate your business growth and achieve your goals.
 				</SectionTitle>
 
-				<Services data={benefitOne} />
+				<Services />
 				<SectionTitle
 					id={"Benefits"}
 					pretitle="Benefits"
@@ -58,6 +59,15 @@ const Home = ({ projects }) => {
 				<StatsSection />
 
 				<SectionTitle
+					pretitle="Testimonials"
+					title="Here's what our customers said"
+				>
+          Testimonails is a great way to increase the brand trust and awareness.
+          Use this section to highlight your popular customers.
+				</SectionTitle>
+				<Testimonials />
+
+				<SectionTitle
 					id={"Projects"}
 					pretitle="projects"
 					title="Every thing is possible with great team"
@@ -73,19 +83,10 @@ const Home = ({ projects }) => {
 					pretitle="Team"
 					title="Every thing is possible with great team"
 				>
-					{/* new stuff can be added  */}
+
 				</SectionTitle>
 
 				<TeamSection />
-
-				<SectionTitle
-					pretitle="Testimonials"
-					title="Here's what our customers said"
-				>
-          Testimonails is a great way to increase the brand trust and awareness.
-          Use this section to highlight your popular customers.
-				</SectionTitle>
-				{/* <Testimonials testimonialsData={testimonialsData} /> */}
 
 				<SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
           Answer your customers possible questions here, it will increase the

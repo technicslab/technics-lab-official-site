@@ -3,6 +3,7 @@ import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
 const Faq = () => {
+
 	const faqData = [
 		{
 			question: "What services do you offer?",
@@ -12,7 +13,7 @@ const Faq = () => {
 	];
 
 	return (
-		<Container className="!p-0">
+		<Container className="!p-0" id="FAQs">
 			<div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
 				{faqData?.map((item, index) => (
 					<div key={index} className="mb-5">
