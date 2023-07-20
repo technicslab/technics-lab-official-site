@@ -34,7 +34,7 @@ const Hero = () => {
 						</p>
 						<div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
 							<a
-								href="https://calendly.com/haseebabbasi00/30min"
+								href="https://calendly.com/technics-lab-managment/30min"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="px-8 py-4 text-lg font-medium text-center text-white bg-[#2093DF] rounded-md hover:bg-indigo-500 focus:bg-indigo-500 ease"
