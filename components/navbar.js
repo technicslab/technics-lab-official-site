@@ -30,9 +30,9 @@ const Navbar = () => {
 				// eslint-disable-line no-mixed-spaces-and-tabs
 				`top-0 w-full z-30 bg-white-500 transition-all bg-slate-100 
         ${scrollActive
-					? "shadow-md pt-0 bg-slate-200 dark:bg-trueGray-800"
-					: "pt-4"
-				}`
+			? "shadow-md pt-0 bg-slate-200 dark:bg-trueGray-800"
+			: "pt-4"
+		}`
 			}
 		>
 			<nav className="container relative flex flex-wrap items-center justify-between py-4 px-8 mx-auto lg:justify-between xl:px-8">

@@ -23,7 +23,7 @@ const Testimonials = () => {
 			designation:"Network Engineer",
 			profile_image:"https://res.cloudinary.com/dkmg7bddr/image/upload/v1689854872/armando_v0q2ex.png"
 		}
-	]
+	];
 	useEffect(() => {
 		AOS.init();
 	}, []);
