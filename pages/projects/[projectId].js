@@ -214,6 +214,56 @@ export const getServerSideProps = async (context) => {
 				`,
 			},
 		},
+		{
+			id: 3,
+			attributes: {
+				title: "Driving License Certification",
+				description:
+          "The Online Traffic Driving Assessment App is a cutting-edge educational platform built using Node.js, Next.js, Tailwind CSS, and MongoDB. It leverages AWS services like EC2 to ensure scalability and reliability. The app aims to assess and enhance students' driving skills through comprehensive lesson modules and quizzes.",
+				tech_stack: "NodeJS, NextJS, Socket.io, Mongo,Aws, EC2",
+				date: null,
+				link: null,
+				createdAt: "2023-07-09T12:27:43.864Z",
+				updatedAt: "2023-07-13T15:59:37.928Z",
+				publishedAt: "2023-07-09T08:03:57.366Z",
+				thumbnail:
+          "https://res.cloudinary.com/dkmg7bddr/image/upload/v1689957292/official-site-cms/projects/Screenshot_from_2023-07-21_21-27-46_hjbkir.png",
+				demo: null,
+				longDesc: `**Key Features:**
+
+				**Admin Dashboard:**
+				- Comprehensive Control: Administrators have full control over the curriculum, allowing them to create, edit, and manage interactive lesson modules covering various traffic rules, regulations, and defensive driving techniques.
+				- Student Management: Admins can oversee student registrations, review submitted documents, and approve eligible students, ensuring a safe and secure learning environment.
+				- Progress Tracking: The dashboard provides insights into student progress, module completion, quiz scores, and overall performance, empowering administrators to support students effectively.
+				
+				**Student Dashboard:**
+				- Personalized Learning Journey: Students can create accounts, upload required documents, and complete the registration process to gain access to approved lesson modules tailored to their learning needs.
+				- Progress Visualization: A clear visual representation of completed modules, quiz scores, and video progress enables students to track their learning journey and identify areas for improvement.
+				- Quiz Attempts: Students can attempt quizzes to test their knowledge and understanding, with the app recording attempts and maintaining a history of quiz scores for easy reference.
+				
+				**Innovative Video Control:**
+				- Sequential Learning: To ensure comprehensive learning, the app restricts fast-forwarding until students watch the video content up to a predefined point, promoting sequential understanding of concepts.
+				- Seamless Continuity: The app allows students to seamlessly resume their lessons from where they left off, whether on the same device or a different one, without losing progress.
+				
+				**Assessment and Certification:**
+				- Quiz Evaluation: Students need to achieve at least 80% on each quiz to demonstrate a thorough understanding of the material. The app keeps track of previous quiz attempts and clears answers for re-attempts.
+				- Completion Certificates: Upon successfully completing all modules with the required quiz score, students are awarded completion certificates, validating their acquired knowledge and skills.
+				- Payment Clearance: Before issuing certificates, the app diligently verifies payment clearance to ensure the authenticity and credibility of each certification.
+				
+				**User-Friendly Interface:**
+				- Intuitive Navigation: The app boasts a user-friendly interface, making it easy for both administrators and students to navigate through lessons, quizzes, and progress tracking.
+				- Mobile Compatibility: With a responsive design, students can access the app seamlessly from their smartphones and tablets, promoting learning flexibility and accessibility.
+				
+				**Driving Safety and Responsibility:**
+				- Promoting Safe Driving: The app's comprehensive curriculum and assessments instill responsible driving habits, contributing to safer roads and communities.
+				- Empowering Learners: By offering a holistic learning experience, the Online Traffic Driving Assessment App empowers students with knowledge and confidence to become skilled and responsible drivers.
+				
+				**Scalable Infrastructure:**
+				- Built on AWS EC2: Leveraging AWS services like EC2, the app ensures a scalable and reliable infrastructure, supporting increasing numbers of users and maintaining high performance.
+				
+				The Online Traffic Driving Assessment App strives to create a culture of responsible driving and road safety through its advanced features, tailored lessons, and comprehensive assessments. By combining cutting-edge technology and engaging content, the app aspires to make a positive impact on driving practices, benefiting individuals and communities alike.`,
+			},
+		},
 	];
 
 	// console.log(projectId, "id");

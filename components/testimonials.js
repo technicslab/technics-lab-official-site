@@ -7,22 +7,25 @@ import styles from "../css/testimonials.module.css";
 import clsx from "clsx";
 
 const Testimonials = () => {
-
-	let testimonialsData=[
+	let testimonialsData = [
 		{
-			company:"Sound M&D",
-			video:"https://res.cloudinary.com/dkmg7bddr/video/upload/v1688925069/official-site-cms/testimonials/Technislab-rick_alte3m.mp4",
-			name:"Rick Hare",
-			designation:"Co-Founder Sound M&D",
-			profile_image:"https://res.cloudinary.com/dkmg7bddr/image/upload/v1688925052/official-site-cms/testimonials/rick_k2e1kr.png"
+			company: "Sound M&D",
+			video:
+        "https://res.cloudinary.com/dkmg7bddr/video/upload/v1688925069/official-site-cms/testimonials/Technislab-rick_alte3m.mp4",
+			name: "Rick Hare",
+			designation: "Co-Founder Sound M&D",
+			profile_image:
+        "https://res.cloudinary.com/dkmg7bddr/image/upload/v1688925052/official-site-cms/testimonials/rick_k2e1kr.png",
 		},
 		{
-			company:"United Airlines",
-			video:"https://res.cloudinary.com/dkmg7bddr/video/upload/v1689854648/Armando_e6ubcv.mp4",
-			name:"Armando Richardson",
-			designation:"Network Engineer",
-			profile_image:"https://res.cloudinary.com/dkmg7bddr/image/upload/v1689854872/armando_v0q2ex.png"
-		}
+			company: "United Airlines",
+			video:
+        "https://res.cloudinary.com/dkmg7bddr/video/upload/v1689854648/Armando_e6ubcv.mp4",
+			name: "Armando Richardson",
+			designation: "Network Engineer",
+			profile_image:
+        "https://res.cloudinary.com/dkmg7bddr/image/upload/v1689854872/armando_v0q2ex.png",
+		},
 	];
 	useEffect(() => {
 		AOS.init();
@@ -36,12 +39,12 @@ const Testimonials = () => {
 };
 
 const Testimonial = ({ children }) => {
-	return <div>{children}</div>;
+	return <div className="">{children}</div>;
 };
 
 const TestimonialContent = ({ children }) => {
 	return (
-		<div className="bg-white shadow-lg p-2 flex flex-col items-center relative after:absolute after:-bottom-16 after:left-1/2 after:-translate-x-1/2 after:w-0">
+		<div className="bg-white rounded-md shadow-lg p-2 flex flex-col items-center relative after:absolute after:-bottom-16 after:left-1/2 after:-translate-x-1/2 after:w-0">
 			{children}
 		</div>
 	);
@@ -85,11 +88,9 @@ function WithSpeechBubbles({ testimonialsData }) {
 						return (
 							<Testimonial key={item.id}>
 								<TestimonialContent>
-									<TestimonialHeading>
-										{item.company}
-									</TestimonialHeading>
+									<TestimonialHeading>{item.company}</TestimonialHeading>
 									<video
-										className={styles.videoContainer}
+										className={`${styles.videoContainer} rounded-md`}
 										controls
 										controlsList="nodownload"
 									>
