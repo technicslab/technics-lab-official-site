@@ -40,7 +40,7 @@ const ContactUsSection = () => {
 	return (
 		<section className="py-16 " id="contact">
 			<div className="container mx-auto px-4">
-				<h2 className="text-3xl text-center font-semibold text-gray-800 dark:text-white mb-8 hover:bg-indigo-500">
+				<h2 className="text-3xl text-center font-semibold text-gray-800 dark:text-white mb-8 ">
           Contact Us
 				</h2>
 				<div className="max-w-3xl mx-auto">

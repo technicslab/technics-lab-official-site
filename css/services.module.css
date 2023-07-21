@@ -14,16 +14,11 @@
   --btn-txt-clr: #333333;
   --transition: all 0.5s;
 
-  height: 400px;
-  width: 300px;
-  overflow: hidden;
-  border-radius: 20px;
-  border-top-left-radius: 70px;
-  position: relative;
-  overflow: hidden;
-  background: var(--clr);
+	border-top-left-radius: 70px;
+	border-radius: 20px;
+	background: var(--clr);
   transition: var(--transition);
-
+	
 }
 .card__1 {
 
@@ -41,8 +36,8 @@
   top: 0;
   left: 0;
   border-bottom-right-radius: 50%;
-  height: 140px;
-  width: 140px;
+  height: 150px;
+  width: 150px;
   background: var(--clr);
 }
 .card__bx .card__data .card__icon::before {

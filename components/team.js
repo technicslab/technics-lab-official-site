@@ -11,7 +11,7 @@ const TeamSection = () => {
 	const teamData = [
 		{
 			image:
-				"https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/IMG_20220127_130148-removebg-preview_1_ruiwgp.png",
+        "https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/IMG_20220127_130148-removebg-preview_1_ruiwgp.png",
 			name: "Zeeshan Ahmed",
 			role: "Co-founder",
 			github: "https://github.com/zeeshan-thedeveloper/",
@@ -20,7 +20,7 @@ const TeamSection = () => {
 		},
 		{
 			image:
-				"https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/nadir_co_founder_q8oawu.png",
+        "https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/nadir_co_founder_q8oawu.png",
 			name: "Nadir Hussain",
 			github: "https://github.com/nadirhussainnn/",
 
@@ -29,7 +29,7 @@ const TeamSection = () => {
 		},
 		{
 			image:
-				"https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/haseeb_cto_xa3kuq.png",
+        "https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/haseeb_cto_xa3kuq.png",
 			name: "Haseeb Ullah",
 			role: "CTO",
 
@@ -38,7 +38,7 @@ const TeamSection = () => {
 		},
 		{
 			image:
-				"https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/samad_ceo_s0s95y.png",
+        "https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/samad_ceo_s0s95y.png",
 			name: "Samad Ali",
 			role: "CEO",
 			github: "https://github.com/haseebUllahAbbasi/",
@@ -47,7 +47,7 @@ const TeamSection = () => {
 		},
 		{
 			image:
-				"https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/noman_coo_e8s2yq.png",
+        "https://res.cloudinary.com/dkmg7bddr/image/upload/c_scale,h_500,w_500/v1689081342/official-site-cms/team/noman_coo_e8s2yq.png",
 			name: "Noman Aijaz",
 			github: "https://github.com/haseebUllahAbbasi/",
 
@@ -62,7 +62,7 @@ const TeamSection = () => {
 					{teamData.map((member, index) => (
 						<div
 							key={index}
-							style={{width:"250px"}}
+							style={{ width: "250px" }}
 							className={
 								"flex flex-col items-center justify-center h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800 transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-trueGray-700"
 							}

@@ -141,14 +141,20 @@ const Services = () => {
 
 const ServiceCard = ({ title, desc, icon }) => {
 	return (
-		<div className={clsx(styles.card__bx, styles.card__1)}>
+		<div
+			className={clsx(
+				styles.card__bx,
+				styles.card__1,
+				"h-[420px] w-[300px] relative"
+			)}
+		>
 			<div className={styles.card__data}>
 				<div className={styles.card__icon}>
 					<div className={styles.card__icon_box}>{icon}</div>
 				</div>
 				<div className={styles.card__content}>
 					<h3>{title}</h3>
-					<p>{desc}</p>
+					<p className="pb-4">{desc}</p>
 					{/* <a href="#">Read More</a> */}
 				</div>
 			</div>
