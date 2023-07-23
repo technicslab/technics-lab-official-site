@@ -3,12 +3,43 @@ import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
 const Faq = () => {
-
 	const faqData = [
 		{
-			question: "What services do you offer?",
+			question: "What services does Technics Lab offer?",
 			answer:
-        "We offer a wide range of services including web development, mobile app development, Smart Contract with Blockchain, and Software Prototyping",
+        "Technics Lab offers a wide range of services, including AI and Blockchain development, Web Application Development, Mobile App Development for Android and iOS platforms, and UI/UX and Graphic Design.",
+		},
+		{
+			question:
+        "Can Technics Lab integrate their services with my existing systems?",
+			answer:
+        "Yes, Technics Lab seamlessly integrates its development services with your existing systems and workflows, ensuring a smooth transition and minimizing disruptions to your business operations.",
+		},
+		{
+			question: "How reliable is Technics Lab in meeting project deadlines?",
+			answer:
+        "Technics Lab values meeting deadlines and ensures that your project will be delivered on time without compromising on quality.",
+		},
+		{
+			question: "What technologies does Technics Lab work with?",
+			answer:
+        "Technics Lab works with a range of technologies, including MERN Stack, MEAN Stack, JAM stack solutions for Web Applications, Java and Kotlin for Android apps, Swift and React Native for iOS apps, and tools like Adobe XD, Sketch, Figma, and InVision for UI/UX design.",
+		},
+		{
+			question:
+        "Can Technics Lab develop blockchain applications and cryptocurrencies?",
+			answer:
+        "Yes, Technics Lab is experienced in developing blockchain applications, Dapps, NFTs, and Crypto apps with Ethereum, offering custom Chat Bots and apps with LLMs and OpenAI.",
+		},
+		{
+			question: "What is the turnaround time for app and website development?",
+			answer:
+        "Technics Lab takes pride in its ability to meet fast turnaround times for app and website development, ensuring timely delivery of complete solutions.",
+		},
+		{
+			question: "How can I get started with Technics Lab's services?",
+			answer:
+        "To get started, simply reach out to Technics Lab and discuss your project requirements. Their team of talented developers will work with you to turn your ideas into reality.",
 		},
 	];
 

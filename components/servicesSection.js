@@ -64,7 +64,7 @@ const ServiceList = ({ services }) => {
 	return (
 		<div>
 			<div className="flex justify-between items-center mb-4">
-				<h2 className="text-2xl font-semibold">Projects</h2>
+				<h2 className="text-2xl font-semibold">Previous Services</h2>
 				<Link href="/services">View All</Link>
 			</div>
 

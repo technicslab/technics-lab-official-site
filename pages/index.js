@@ -6,11 +6,9 @@ import React from "react";
 import { benefitTwo } from "../components/data";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
-// import Testimonials from "../components/testimonials";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import Services from "../components/services";
-import TeamSection from "../components/team";
 import ContactUsSection from "../components/contactUs";
 import ProjectSection from "../components/projectsection";
 import ServicesSection from "../components/servicesSection";
@@ -59,14 +57,6 @@ const Home = ({ projects }) => {
 				<StatsSection />
 
 				<SectionTitle
-					pretitle="Testimonials"
-					title="Here's what our customers said"
-				>
-          Testimonails is a great way to increase the brand trust and awareness.
-          Use this section to highlight your popular customers.
-				</SectionTitle>
-				<Testimonials />
-				<SectionTitle
 					id={"Projects"}
 					pretitle="projects"
 					title="Every thing is possible with great team"
@@ -74,14 +64,23 @@ const Home = ({ projects }) => {
 				<ProjectSection projects={projects} />
 
 				<ServicesSection />
-
 				<SectionTitle
+					pretitle="Testimonials"
+					title="Here's what our customers said"
+				>
+          Testimonails is a great way to increase the brand trust and awareness.
+          Use this section to highlight your popular customers.
+				</SectionTitle>
+
+				<Testimonials />
+
+				{/* <SectionTitle
 					id={"Company"}
 					pretitle="Team"
 					title="Every thing is possible with great team"
 				></SectionTitle>
 
-				<TeamSection />
+				<TeamSection /> */}
 
 				<SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
           Answer your customers possible questions here, it will increase the
@@ -137,7 +136,8 @@ export const getServerSideProps = async () => {
 			id: 3,
 			attributes: {
 				title: "Driving License Certification",
-				description: "The Online Traffic Driving Assessment App is a cutting-edge educational platform built using Node.js, Next.js, Tailwind CSS, and MongoDB. It leverages AWS services like EC2 to ensure scalability and reliability. The app aims to assess and enhance students' driving skills through comprehensive lesson modules and quizzes.",
+				description:
+          "The Online Traffic Driving Assessment App is a cutting-edge educational platform built using Node.js, Next.js, Tailwind CSS, and MongoDB. It leverages AWS services like EC2 to ensure scalability and reliability. The app aims to assess and enhance students' driving skills through comprehensive lesson modules and quizzes.",
 				tech_stack: "NodeJS, NextJS, Socket.io, Mongo,Aws, EC2",
 				date: null,
 				link: null,
